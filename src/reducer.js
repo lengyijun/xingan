@@ -9,6 +9,10 @@ var tasks_init=[
     id:1,
     title:"e.target.value",
     p:"onChange"
+  },{
+    id:2,
+    title:"信息安全竞赛",
+    p:"打酱油？？"
   }
 ]
 
@@ -20,7 +24,7 @@ function todos(state={tasks: tasks_init,isnewnote:false, isnote:0},action){
       var t=state.tasks
       console.log("ADD")
       return {...state,
-        tasks:[...t,{id:t.length+1,p:action.task}]}
+        tasks:[...t,{id:t.length+1,p:action.p,title:action.title}]}
     case UPDATEID:
       console.log("what happened??")
       var t=state.tasks

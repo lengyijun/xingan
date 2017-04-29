@@ -16,7 +16,10 @@ class App extends Component{
     console.log(this.props.tasks)
     return(
       <div>
-        <Toolbar />
+        <header />
+        <Toolbar
+          addnotes={(x,y) => dispatch(add(x,y))}
+        />
         <NoteList
           notes={this.props.tasks}
           updateId={x => dispatch(onId(x))}

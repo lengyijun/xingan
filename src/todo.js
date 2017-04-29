@@ -6,13 +6,15 @@ class TODO extends Component{
     const{task,updateId}=this.props
 
     return(
-      <li>
+      <li id="todo-item">
         <div className="view" onClick={function () {
-          console.log(task.id)
           updateId(task.id)
         }}>
+          <h2>
+            {task.title}
+          </h2>
           <label>
-            {task.p}
+            {task.p.trim().substring(0,30)}
           </label>
         </div>
       </li>

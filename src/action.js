@@ -10,10 +10,11 @@ export function update(tasks){
   }
 }
 
-export function add(task){
+export function add(title,p){
   return{
     type:ADD,
-    task
+    title,
+    p
   }
 }
 

@@ -1,0 +1,53 @@
+header{
+  background: #448aff;
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  height: 40px;
+}
+#toolbar{
+  float:left;
+  height: 900px;  /* 100%有问题  */
+  width: 80px;
+  background-color: #30414D;
+  color:#767676;
+  padding: 35px 25px 25px 25px;
+  box-sizing: border-box;
+}
+
+#tohidinput {
+  display: none;
+}
+#notes-list {
+  float:left;
+  height: 100%;
+  width: 30%;
+  box-sizing: border-box;
+}
+#note-editor{
+  float: left;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#todo-item {
+  width: inherit;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#note-editor textarea {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  padding-top: 15px;
+}
+
+#toolbar i{
+  font-size: 30px;
+  margin-bottom: 35px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}

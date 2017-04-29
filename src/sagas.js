@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 
 
 function getinitialdata(){
-  return fetch("http://localhost:3001/api_test")
+  return fetch("http://localhost:3001/users")
           .then(response=>response.json())
           .then(json=>json.data)
 }
