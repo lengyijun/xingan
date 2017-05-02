@@ -2,11 +2,41 @@ import React,{Component,PropTypes} from 'react'
 import TODO from './todo'
 
 class NoteList extends Component{
+  componentWillMount(){
+    const {notes}=this.props;
+    this.state={
+      localnotes:notes,
+      show:"ALL"
+    }
+  }
+  componentWillReceiveProps(nextProps){
+    if('notes' in nextProps){
+      this.setState({
+        localnotes:nextProps.notes
+      })
+    }
+  }
+
+  filterStar(){
+    const {notes}=this.props;
+    var notea=notes.filter(function (x) {
+      return(x.star)
+    })
+    this.setState({
+      localnotes:notea
+    })
+  }
+
+  showAllNotes(){
+    const {notes}=this.props;
+    this.setState({
+      localnotes:notes
+    })
+  }
 
   render(){
     const {dispatch,updateId,notes}=this.props;
-    var t=notes.map(function (x) {
-        // <div onClick={updateId(x.id)}>
+    var t=this.state.localnotes.map(function (x) {
       return(<TODO task={x} updateId={updateId}/>)
     })
     return(
@@ -16,11 +46,11 @@ class NoteList extends Component{
         <h2>我的笔记</h2>
       <div className="btn-group btn-group-justified" role="group">
           <div className="btn-group" role="group">
-            <button type="button" className="btn btn-default" >All Notes</button>
+            <button type="button" className="btn btn-default" onClick={this.showAllNotes.bind(this)}>All Notes</button>
           </div>
 
         <div className="btn-group" role="group">
-          <button type="button" className="btn btn-default" >Favorites</button>
+          <button type="button" className="btn btn-default" onClick={this.filterStar.bind(this)}>Favorites</button>
         </div>
       </div>
 
