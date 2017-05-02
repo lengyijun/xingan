@@ -22,7 +22,7 @@ class Toolbar extends Component{
     return(
       <section id="toolbar">
         <div id="firstgly">
-          <i className="glyphicon glyphicon-plus"></i>
+          <i className="glyphicon glyphicon-plus" onClick={x => this.props.addnotes("无标题","")}></i>
           <i className="glyphicon glyphicon-star"></i>
           <i className="glyphicon glyphicon-remove" onClick={this.sync1.bind(this)}></i>
           <label onChange={this.handleClick.bind(this)}>
