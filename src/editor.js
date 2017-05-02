@@ -21,7 +21,7 @@ class Editor extends Component{
     }
     return(
     <div id="note-editor">
-    <div className="form-group">
+    <div className="form-group" id="form-group">
       <input type="text" name="title"
       className="title form-control"
       value={this.state.t.title}

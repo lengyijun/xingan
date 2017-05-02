@@ -12,12 +12,20 @@ class App extends Component{
   }
 
   render(){
-    const{dispatch}=this.props;
-    console.log(this.props.tasks)
+    const{dispatch,tasks}=this.props;
+    console.log(tasks)
     return(
       <div>
-        <header />
+        <header>
+          <div id="kb-info">
+          <h3 id="kbname">
+            个人笔记
+          </h3>
+          </div>
+        </header>
         <Toolbar
+          notes={tasks}
+          sync={x => dispatch({type:"SYNC"})}
           addnotes={(x,y) => dispatch(add(x,y))}
         />
         <NoteList

@@ -12,22 +12,31 @@ class Toolbar extends Component{
       }
       reader.readAsText(event.target.files[0])
     }
-  render(){
 
+    sync1(){
+      const {sync,notes}=this.props
+      console.log("sync1")
+      sync(notes)
+    }
+  render(){
     return(
-      <div id="toolbar">
-        <i className="glyphicon glyphicon-plus"></i>
-        <i className="glyphicon glyphicon-star" ></i>
-        <i className="glyphicon glyphicon-remove"></i>
-        <label onChange={this.handleClick.bind(this)}>
-        <input type="file" id="tohidinput" />
-        <i className="glyphicon glyphicon-upload" ></i>
-        </label>
-      </div>
+      <section id="toolbar">
+        <div id="firstgly">
+          <i className="glyphicon glyphicon-plus"></i>
+          <i className="glyphicon glyphicon-star"></i>
+          <i className="glyphicon glyphicon-remove" onClick={this.sync1.bind(this)}></i>
+          <label onChange={this.handleClick.bind(this)}>
+          <input type="file" id="tohidinput" />
+          <i className="glyphicon glyphicon-upload" ></i>
+          </label>
+        </div>
+      </section>
     )
   }
 }
 Toolbar.PropTypes={
-  addnotes:PropTypes.func
+  addnotes:PropTypes.func,
+  sync:PropTypes.func,
+  notes:PropTypes.array
 }
 export default Toolbar
