@@ -54,13 +54,13 @@ class NoteList extends Component{
         </div>
       </div>
 
-      <div className="btn-group btn-group-justified" role="group">
-      <div className="input-group search">
-      <input type="text" className="form-control" placeholder="Search for..." />
-      <span className="input-group-addon">
-      <i className="glyphicon glyphicon-search"></i>
-      </span>
-      </div>
+      <div className="btn-group btn-group-justified" id="search" role="group">
+        <div className="input-group search">
+          <input type="text" className="form-control" placeholder="Search for..." />
+          <span className="input-group-addon">
+            <i className="glyphicon glyphicon-search"></i>
+          </span>
+        </div>
       </div>
 
       </div>

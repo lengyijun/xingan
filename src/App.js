@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Editor from './editor'
 import Toolbar from './toolbar'
 import NoteList from './notesList'
-import {star,add,onId,remove} from './action'
+import {star,add,onId,remove,updateById} from './action'
 
 class App extends Component{
   componentWillMount(){
@@ -37,8 +37,8 @@ class App extends Component{
         />
         <Editor
           notes={this.props.tasks}
-          isnewnote={this.props.isnewnote}
           isnote={this.props.isnote}
+          updateById={(x,y) => dispatch(updateById(x,y))}
         />
       </div>
     )

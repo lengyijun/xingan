@@ -106,6 +106,12 @@ header #kbname{
   width: inherit;
 }
 
+#search {
+  position:relative;
+  top:5px; /* 相比于原来的位置向下移动5px  */
+}
+
+/*notelist 里面的*/
 #container{
   position: absolute;
   top: 150px;

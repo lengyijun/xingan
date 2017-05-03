@@ -5,7 +5,7 @@ var tasks_init=[
     id:0,
     title:"hello title",
     star:true,
-    p:"reducer componentWillMount"
+    p:"reducer componentWillMount\ncomponentWillReceiveProps"
   },{
     id:1,
     star:false,
@@ -29,7 +29,7 @@ var tasks_init=[
   }
 ]
 
-function todos(state={tasks: tasks_init,isnewnote:false, isnote:0},action){
+function todos(state={tasks: tasks_init, isnote:0},action){
   switch(action.type){
     case UPDATE:
       return {tasks: action.tasks}
