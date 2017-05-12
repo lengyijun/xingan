@@ -5,7 +5,7 @@ var tasks_init=[
     id:0,
     title:"hello title",
     star:true,
-    p:"reducer componentWillMount\ncomponentWillReceiveProps"
+    p:"reducer componentWillMount\ncomponentWillReceiveProps\nstyle=\"display: none\";\nhover事件"
   },{
     id:1,
     star:false,
@@ -32,24 +32,38 @@ var tasks_init=[
 function todos(state={tasks: tasks_init, isnote:0},action){
   switch(action.type){
     case UPDATE:
-      return {tasks: action.tasks}
+      return {...state,tasks: action.tasks}
     case ADD:
       var t=state.tasks
-      console.log("ADD")
+      // var newid=t.reduce(function(a,b){  todo
+        // return Math.max(a.id,b.id)
+      // })
+      var newid=1+Math.max(...t.map(x=>x.id))
+      console.log("newid: "+newid) 
       return {...state,
-        tasks:[...t,{id:t.length+1,p:action.p,title:action.title,star:false}]}
+        tasks:[...t,{id:newid,p:action.p,title:action.title,star:false}]}
     case UPDATEID:
-      console.log("what happened??")
+      console.log("update id")
       var t=state.tasks
-      t[action.id]["title"]=action.data.title
-      t[action.id]["p"]=action.data.p
-      return {...state,task: t}
+      var index=t.findIndex(function (x) {
+        return(x.id==action.id)
+      })
+      if(index != -1){
+        t[index]["title"]=action.data.title
+        t[index]["p"]=action.data.p
+        return {...state,task: t}
+      } else{
+        return state
+      }
     case ONID:
       console.log("reducer onid: "+action.id)
       return {...state,isnote:action.id}
     case STAR:
       var t=state.tasks
-      t[state.isnote]["star"]=!t[state.isnote]["star"]
+      var index=t.findIndex(function (x) {
+        return(x.id==state.isnote)
+      })
+      t[index]["star"]=!t[index]["star"]
       return {...state,tasks: t}
     case DELETE:
       var t=state.tasks.filter(function(x){

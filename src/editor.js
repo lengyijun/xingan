@@ -3,31 +3,25 @@ import PropTypes from 'prop-types'
 
 class Editor extends Component{
   componentWillMount(){
-    const {notes,isnote} =this.props
-      var t=notes.find(function (x) {
-        return(x.id == isnote)
-      })
+    const {yournote,isnote} =this.props
       this.state={
         oldisnote:isnote,
-        t:t,
-        title:t.title,
-        p:t.p
+        t:yournote,
+        title:yournote.title,
+        p:yournote.p
       }
   }
 
 componentWillReceiveProps(nextProps){
-  const {updateById,notes}=this.props
-  if("isnote" in nextProps){
+  const {updateById,yournote}=this.props
+  if("yournote" in nextProps){
     var t={title:this.state.title,p:this.state.p}
     updateById(this.state.oldisnote,t)
-    var note=notes.find(function (x) {
-        return(x.id == nextProps.isnote)
-    })
     this.setState({
       oldisnote:nextProps.isnote,
-      t:note,
-      title:note.title,
-      p:note.p
+      t:nextProps.yournote,
+      title:nextProps.yournote.title,
+      p:nextProps.yournote.p
     })
   }
 }
@@ -70,7 +64,7 @@ componentWillReceiveProps(nextProps){
 }
 
 Editor.PropTypes={
-  notes: PropTypes.array.isRequired,
+  yournote:PropTypes.object.isRequired,
   isnote:PropTypes.number
 }
 

@@ -13,8 +13,10 @@ class App extends Component{
 
 
   render(){
-    const{dispatch,tasks}=this.props;
-    console.log(tasks)
+    const{dispatch,tasks,isnote}=this.props;
+    var t=tasks.find(function (x) {
+      return(x.id == isnote)
+    })
     return(
       <div>
         <header>
@@ -29,14 +31,19 @@ class App extends Component{
           notes={tasks}
           sync={x => dispatch({type:"SYNC"})}
           remove={x => dispatch(remove())}
-          addnotes={(x,y) => dispatch(add(x,y))}
+          addnotes={(x,y) => {dispatch({
+                                      type:"ADDREMOTE",
+                                      payload:{y}
+                                     });
+                              dispatch(add(x,y))
+                                     }}
         />
         <NoteList
           notes={this.props.tasks}
           updateId={x => dispatch(onId(x))}
         />
         <Editor
-          notes={this.props.tasks}
+          yournote={t}
           isnote={this.props.isnote}
           updateById={(x,y) => dispatch(updateById(x,y))}
         />
