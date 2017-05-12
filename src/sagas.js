@@ -20,9 +20,10 @@ function getinitialdata(){
   })
 }
 
-function* deleteRemote(id){
-  console.log("delete")
-  return fetch("http://localhost:8000/ciphertexts/"+id+"/",{
+function* deleteRemote(action){
+  console.log(action)
+  console.log("delete "+action.payload.id)
+  return fetch("http://localhost:8000/ciphertexts/"+action.payload.id+"/",{
     method:"DELETE"
   }).then(res=>console.log(res))
 }

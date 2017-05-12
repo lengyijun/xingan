@@ -30,7 +30,12 @@ class App extends Component{
           star={x => dispatch(star())}
           notes={tasks}
           sync={x => dispatch({type:"SYNC"})}
-          remove={x => dispatch(remove())}
+          remove={x => {dispatch(remove());
+                        dispatch({
+                            type:"DELREMOTE",
+                            payload:{id:isnote}
+                        })
+          }}
           addnotes={(x,y) => {dispatch({
                                       type:"ADDREMOTE",
                                       payload:{y}
