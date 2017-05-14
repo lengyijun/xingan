@@ -29,7 +29,6 @@ class App extends Component{
         <Toolbar
           star={x => dispatch(star())}
           notes={tasks}
-          sync={x => dispatch({type:"SYNC"})}
           remove={x => {dispatch(remove());
                         dispatch({
                             type:"DELREMOTE",
@@ -38,14 +37,15 @@ class App extends Component{
           }}
           addnotes={(x,y) => {dispatch({
                                       type:"ADDREMOTE",
-                                      payload:{y}
+                                      payload:{x,y}
                                      });
                               dispatch(add(x,y))
                                      }}
         />
         <NoteList
-          notes={this.props.tasks}
+          notes={tasks}
           updateId={x => dispatch(onId(x))}
+          search={x => dispatch({type:"SEARCH",payload:{x}})}
         />
         <Editor
           yournote={t}

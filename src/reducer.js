@@ -32,12 +32,11 @@ var tasks_init=[
 function todos(state={tasks: tasks_init, isnote:0},action){
   switch(action.type){
     case UPDATE:
+      console.log("new data come")
+      console.log(action.tasks)
       return {...state,tasks: action.tasks}
     case ADD:
       var t=state.tasks
-      // var newid=t.reduce(function(a,b){  todo
-        // return Math.max(a.id,b.id)
-      // })
       var newid=1+Math.max(...t.map(x=>x.id))
       console.log("newid: "+newid) 
       return {...state,
@@ -51,7 +50,7 @@ function todos(state={tasks: tasks_init, isnote:0},action){
       if(index != -1){
         t[index]["title"]=action.data.title
         t[index]["p"]=action.data.p
-        return {...state,task: t}
+        return {...state,tasks: t}
       } else{
         return state
       }

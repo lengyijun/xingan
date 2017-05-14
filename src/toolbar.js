@@ -13,11 +13,6 @@ class Toolbar extends Component{
       reader.readAsText(event.target.files[0])
     }
 
-    sync1(){
-      const {sync,notes}=this.props
-      console.log("sync1")
-      sync(notes)
-    }
   render(){
     return(
       <section id="toolbar">
@@ -25,7 +20,6 @@ class Toolbar extends Component{
           <i className="glyphicon glyphicon-plus" onClick={x => this.props.addnotes("无标题","")}></i>
           <i className="glyphicon glyphicon-star" onClick={x => this.props.star()}></i>
           <i className="glyphicon glyphicon-remove" onClick={x => this.props.remove()}></i>
-          <i className="glyphicon glyphicon-remove" onClick={this.sync1.bind(this)}></i>
           <label onChange={this.handleClick.bind(this)}>
           <input type="file" id="tohidinput" />
           <i className="glyphicon glyphicon-upload" ></i>
@@ -37,7 +31,6 @@ class Toolbar extends Component{
 }
 Toolbar.PropTypes={
   addnotes:PropTypes.func,
-  sync:PropTypes.func,
   notes:PropTypes.array,
   star:PropTypes.func,
   remove:PropTypes.func

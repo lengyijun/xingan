@@ -6,13 +6,17 @@ class NoteList extends Component{
     const {notes}=this.props;
     this.state={
       localnotes:notes,
-      show:"ALL"
+      show:"ALL",
+      inputvalue:""
     }
   }
   componentWillReceiveProps(nextProps){
     if('notes' in nextProps){
+      console.log("new note come to notelist")
+      console.log(nextProps.notes)
       this.setState({
-        localnotes:nextProps.notes
+        localnotes:nextProps.notes,
+        inputvalue:""
       })
     }
   }
@@ -34,11 +38,18 @@ class NoteList extends Component{
     })
   }
 
+  updateInputValue(evt){
+    this.setState({
+      inputvalue: evt.target.value
+    })
+  }
+
   render(){
-    const {dispatch,updateId,notes}=this.props;
+    const {search,updateId}=this.props;
     var t=this.state.localnotes.map(function (x) {
       return(<TODO task={x} updateId={updateId}/>)
     })
+    console.log(t)
     return(
       <div id="notes-list">
       <div id="after-notes-list">
@@ -56,9 +67,9 @@ class NoteList extends Component{
 
       <div className="btn-group btn-group-justified" id="search" role="group">
         <div className="input-group search">
-          <input type="text" className="form-control" placeholder="Search for..." />
+          <input type="text" className="form-control" placeholder="Search for..." value={this.state.inputvalue} onChange={this.updateInputValue.bind(this)} />
           <span className="input-group-addon">
-            <i className="glyphicon glyphicon-search"></i>
+            <i className="glyphicon glyphicon-search" onClick={x => search(this.state.inputvalue)}></i>
           </span>
         </div>
       </div>
@@ -84,7 +95,8 @@ class NoteList extends Component{
 
 NoteList.PropTypes={
   notes: PropTypes.array.isRequired,
-  updateId:PropTypes.func.isRequired
+  updateId:PropTypes.func.isRequired,
+  search:PropTypes.func.isRequired
 }
 
 
