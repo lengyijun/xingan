@@ -2,6 +2,7 @@ import { fork,call, put, takeEvery, takeLatest,all } from 'redux-saga/effects'
 import fetch from 'isomorphic-fetch'
 import axios from 'axios'
 import aesjs from 'aes-js'
+import dict1 from './b.js'
 
 function getinitialdata(){
   return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts.json"
@@ -75,13 +76,29 @@ function* finishsearch(action){
  }
 
  function search(keystring) {
-   console.log("searching")
-   return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts/?keystring="+"1111001001"
-   ).then(function (req) {
-     return req.data
-   }).catch(function (error) {
-     console.log(error)
-   })
+   console.log("searching " + keystring)
+   var a = dict1[keystring]
+   console.log(a)
+   if (a !== undefined) {
+     return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts/?key=" + a
+     ).then(function (req) {
+       return req.data.map(function (x) {
+         var a = decrypt(x.context).split("{{{")
+         console.log(a)
+         return {
+           id: x.id,
+           title: a[0],
+           star: false,
+           p: a[1]
+         }
+       })
+     }).catch(function (error) {
+       console.log(error)
+     })
+   } else {
+     console.log("not found this word")
+     return []
+   }
  }
 
 function* mySaga(){
