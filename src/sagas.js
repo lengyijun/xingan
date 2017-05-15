@@ -4,7 +4,7 @@ import axios from 'axios'
 import aesjs from 'aes-js'
 
 function getinitialdata(){
-  return axios.get("http://localhost:8000/ciphertexts.json"
+  return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts.json"
   ).then(function (req) {
     return req.data.map(function (x){
       var a=decrypt(x.context).split("{{{")
@@ -25,7 +25,7 @@ function getinitialdata(){
 function* deleteRemote(action){
   console.log(action)
   console.log("delete "+action.payload.id)
-  return fetch("http://localhost:8000/ciphertexts/"+action.payload.id+"/",{
+  return fetch("http://www.wangjksjtu.com.cn:2117/ciphertexts/"+action.payload.id+"/",{
     method:"DELETE"
   }).then(res=>console.log(res))
 }
@@ -68,16 +68,15 @@ function* finishsearch(action){
     console.log("add one note")
     var a=encrypt(action.payload.x+"{{{"+action.payload.y)
 
-    return axios.post("http://localhost:8000/ciphertexts/",{
-      keystring:"1010101010",
+    return axios.post("http://www.wangjksjtu.com.cn:2117/ciphertexts/",{
+      keystring:action.payload.keystring,
       context:a
     }).then(res => console.log(res))
  }
 
  function search(keystring) {
    console.log("searching")
-   return axios.get("http://localhost:8000/ciphertexts/?keystring="+"1111001001"
-  //  return axios.get("http://localhost:8000/ciphertexts/?keystring="+keystring
+   return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts/?keystring="+"1111001001"
    ).then(function (req) {
      return req.data
    }).catch(function (error) {
