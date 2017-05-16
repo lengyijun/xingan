@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
+import TagCloud from './tagcloud'
 
 class Editor extends Component{
   componentWillMount(){
@@ -28,6 +29,7 @@ componentWillReceiveProps(nextProps){
   render(){
     var title=this.state.title
     var p=this.state.p
+    var keystring=p.split("\n").slice(-1).pop()
     return(
     <div id="note-editor">
     <div className="form-group" id="form-group">
@@ -36,6 +38,9 @@ componentWillReceiveProps(nextProps){
       value={title}
       onChange={this._onChangeTitle.bind(this)}
       placeholder="请输入标题" />
+      <TagCloud 
+        keystring={keystring}
+      />
 
       <textarea
         value={p}

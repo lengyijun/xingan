@@ -75,11 +75,21 @@ function* finishsearch(action){
     }).then(res => console.log(res))
  }
 
+ //sample ?key=1|3|8-2|4
  function search(keystring) {
    console.log("searching " + keystring)
-   var a = dict1[keystring]
+   var keyarr=keystring.split(" ")
+   var a=""
+   for (var i = 0; i < keyarr.length; ++i) {
+     var b=dict1[keystring]
+     if(b !== undefined){
+      a += b
+      a += "|"
+     }
+   }
    console.log(a)
-   if (a !== undefined) {
+   if (a !== "") {
+     a=a.substring(0,a.length-1) //remove the last |
      return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts/?key=" + a
      ).then(function (req) {
        return req.data.map(function (x) {
@@ -96,7 +106,7 @@ function* finishsearch(action){
        console.log(error)
      })
    } else {
-     console.log("not found this word")
+     console.log("not found any word")
      return []
    }
  }
