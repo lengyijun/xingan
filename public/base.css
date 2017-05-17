@@ -133,9 +133,13 @@ header #kbname{
 #todo-item {
   width: inherit;
   height: 100px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   /*border: 1px solid #BBBCC4;*/
   border-bottom: 1px solid #f0f0f0
+}
+
+#todo-item h4{
+  margin-top: 0
 }
 
 #form-group{

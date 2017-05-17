@@ -8,6 +8,7 @@ class NoteList extends Component{
       localnotes:notes,
       show:"ALL",
       inputvalue:"",
+      clickedid:0,
       title:"SSE"
     }
   }
@@ -44,13 +45,26 @@ class NoteList extends Component{
       inputvalue: evt.target.value
     })
   }
+  
+  handleItemClick(id){
+    const {updateId}=this.props
+    updateId(id)
+    this.setState({
+      clickedid:id
+    })
+  }
 
   render(){
     const {search,updateId}=this.props;
-    var t=this.state.localnotes.map(function (x) {
-      return(<TODO task={x} updateId={updateId}/>)
-    })
-    console.log(t)
+    var handleItemClick=this.handleItemClick
+    var t=[]
+    for(let i=0;i<this.state.localnotes.length;++i){
+      var isClicked= this.state.localnotes[i].id == this.state.clickedid
+      console.log(isClicked)
+      t.push(<TODO task={this.state.localnotes[i]}
+        updateId={handleItemClick.bind(this)}
+        isClicked={isClicked} />)
+    }
     return(
       <div id="notes-list">
       <div id="after-notes-list">
@@ -77,16 +91,10 @@ class NoteList extends Component{
 
       </div>
 
-      <div className="container" id="container">
-      <div className="list-group">
-      <a className="list-group-item" href="#">
-      <section>
-      <ul>
+      <div id="container">
+      <ul className="list-group">
         {t}
       </ul>
-      </section>
-      </a>
-      </div>
       </div>
       </div>
       </div>
