@@ -114,7 +114,7 @@ header #kbname{
 /*notelist 里面的*/
 #container{
   position: absolute;
-  top: 150px;
+  top: 140px;
   bottom: 3px;
   width:400px;
   height: 80%;
@@ -122,17 +122,20 @@ header #kbname{
   overflow-x: auto;
 }
 #note-editor{
-  margin-left: 12px;
-  float: left;
+  margin-left: 540px;
+  /*float: left;*/
   height: 100%;
   width: 50%;
   position: relative;
+  /*background-color: #FCFCFC;*/
 }
 
 #todo-item {
   width: inherit;
   height: 100px;
   margin-bottom: 20px;
+  /*border: 1px solid #BBBCC4;*/
+  border-bottom: 1px solid #f0f0f0
 }
 
 #form-group{
@@ -152,16 +155,25 @@ header #kbname{
   top: 0px;
   position: absolute;
 }
-#note-editor textarea {
+#note-editor .tag-cloud{
+  position: absolute;
   top: 50px;
+  width: 100%;
+  background-color: #FCFCFC;
+  border: 1px solid #BBBCC4;
+  margin-top: 2px;
+}
+#note-editor textarea {
+  top: 90px;
   margin-top: 2px;
   position: absolute;
   width: 100%;
-  height: 546px;
+  height: 520px;
   overflow: hidden;
   border: 0;
   border-radius: 0;
   padding-top: 15px;
+  overflow: auto;
 }
 
 #toolbar i{

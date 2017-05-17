@@ -18,7 +18,7 @@ class Toolbar extends Component{
       for (var i = 0, len = files.length; i < len; i++) {
         var file = files[i];
         var reader = new FileReader();
-        reader.onload = (function (f) {
+        reader.onload = (function (f) { //一个声明即执行的函数，返回一个函数
           return function (e) {
             var content =this.result
             var keystring = content.split('\n').slice(-1).pop()

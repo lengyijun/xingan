@@ -4,8 +4,10 @@ import axios from 'axios'
 import aesjs from 'aes-js'
 import dict1 from './b.js'
 
+// var baseurl="http://www.wangjksjtu.com.cn:2117/"
+var baseurl="http://localhost:8000/"
 function getinitialdata(){
-  return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts.json"
+  return axios.get(baseurl+"ciphertexts.json"
   ).then(function (req) {
     return req.data.map(function (x){
       var a=decrypt(x.context).split("{{{")
@@ -26,7 +28,7 @@ function getinitialdata(){
 function* deleteRemote(action){
   console.log(action)
   console.log("delete "+action.payload.id)
-  return fetch("http://www.wangjksjtu.com.cn:2117/ciphertexts/"+action.payload.id+"/",{
+  return fetch(baseurl+"ciphertexts/"+action.payload.id+"/",{
     method:"DELETE"
   }).then(res=>console.log(res))
 }
@@ -69,7 +71,7 @@ function* finishsearch(action){
     console.log("add one note")
     var a=encrypt(action.payload.x+"{{{"+action.payload.y)
 
-    return axios.post("http://www.wangjksjtu.com.cn:2117/ciphertexts/",{
+    return axios.post(baseurl+"ciphertexts/",{
       keystring:action.payload.keystring,
       context:a
     }).then(res => console.log(res))
@@ -81,7 +83,7 @@ function* finishsearch(action){
    var keyarr=keystring.split(" ")
    var a=""
    for (var i = 0; i < keyarr.length; ++i) {
-     var b=dict1[keystring]
+     var b=dict1[keyarr[i]]
      if(b !== undefined){
       a += b
       a += "|"
@@ -90,7 +92,8 @@ function* finishsearch(action){
    console.log(a)
    if (a !== "") {
      a=a.substring(0,a.length-1) //remove the last |
-     return axios.get("http://www.wangjksjtu.com.cn:2117/ciphertexts/?key=" + a
+     console.log(a)
+     return axios.get(baseurl+"ciphertexts/?key=" + a
      ).then(function (req) {
        return req.data.map(function (x) {
          var a = decrypt(x.context).split("{{{")
@@ -116,7 +119,7 @@ function* mySaga(){
     takeEvery("INIT",initlocaldata), //初始化，获得所有数据
     takeEvery("DELREMOTE",deleteRemote), //删除
     takeEvery("ADDREMOTE",addonenote), //添加
-    takeEvery("SEARCH",finishsearch) //搜索
+    takeLatest("SEARCH",finishsearch) //搜索
   ]
 }
 

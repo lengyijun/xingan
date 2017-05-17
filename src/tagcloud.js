@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import { TagCloud } from "react-tagcloud";
+import {connect} from 'react-redux'
 import arr from './a'
-
 
 class MyTagCloud extends Component {
     render() {
+        const {dispatch}=this.props
 
         const data = [
             // { value: "jQuery", count: 25 }, { value: "MongoDB", count: 18 },
-            // { value: "JavaScript", count: 38 }, { value: "React", count: 30 },
-            // { value: "Nodejs", count: 28 }, { value: "Express.js", count: 25 },
         ];
 
         const keystring = this.props.keystring
-        for(var i=0;i<keystring.length;++i){
-            if(keystring.charAt(i)-'0'){
+        for (var i = 0; i < keystring.length; ++i) {
+            if (keystring.charAt(i) - '0') {
                 data.push({
                     value: arr[i],
-                    count:10
+                    count: 10
                 })
             }
 
@@ -44,17 +43,19 @@ class MyTagCloud extends Component {
                     color: 'blue',
                 }}>{tag.value}</span>
         );
-        return(
-    <TagCloud tags={data}
-        minSize={1}
-        maxSize={1} //ensure the same size
-        renderer={customRenderer} />
+        return (
+            <TagCloud tags={data}
+                minSize={1}
+                maxSize={1} //ensure the same size
+                renderer={customRenderer} 
+                onClick={(a,b) => {console.log(a.value);var x=a.value;dispatch({type:"SEARCH",payload:{x}})}}
+            />
 
         )
     }
 
 }
-export default MyTagCloud
+export default  connect()(MyTagCloud)
 
 /*export default () => (
     <TagCloud tags={data}

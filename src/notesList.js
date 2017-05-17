@@ -7,7 +7,8 @@ class NoteList extends Component{
     this.state={
       localnotes:notes,
       show:"ALL",
-      inputvalue:""
+      inputvalue:"",
+      title:"SSE"
     }
   }
   componentWillReceiveProps(nextProps){
@@ -54,7 +55,7 @@ class NoteList extends Component{
       <div id="notes-list">
       <div id="after-notes-list">
       <div id="list-header">
-        <h2>我的笔记</h2>
+        <h3>{this.state.title}</h3>
       <div className="btn-group btn-group-justified" role="group">
           <div className="btn-group" role="group">
             <button type="button" className="btn btn-default" onClick={this.showAllNotes.bind(this)}>All Notes</button>
@@ -69,7 +70,7 @@ class NoteList extends Component{
         <div className="input-group search">
           <input type="text" className="form-control" placeholder="Search for..." value={this.state.inputvalue} onChange={this.updateInputValue.bind(this)} />
           <span className="input-group-addon">
-            <i className="glyphicon glyphicon-search" onClick={x => search(this.state.inputvalue)}></i>
+            <i className="glyphicon glyphicon-search" onClick={x => {search(this.state.inputvalue);this.setState({title:"search "+this.state.inputvalue})}}></i>
           </span>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React,{Component,PropTypes} from 'react'
 
 class TODO extends Component{
-
   render(){
     const{task,updateId}=this.props
 
@@ -10,9 +9,9 @@ class TODO extends Component{
         <div className="view" onClick={function () {
           updateId(task.id)
         }}>
-          <h2>
+          <h4>
             {task.title}
-          </h2>
+          </h4>
           <label>
             {task.p.trim().substring(0,30)}
           </label>

@@ -5,27 +5,27 @@ var tasks_init=[
     id:0,
     title:"hello title",
     star:true,
-    p:"reducer componentWillMount\ncomponentWillReceiveProps\nstyle=\"display: none\";\nhover事件"
+    p:"reducer componentWillMount\ncomponentWillReceiveProps\nstyle=\"display: none\";\nhover事件\n11111111111"
   },{
     id:1,
     star:false,
     title:"e.target.value",
-    p:"onChange"
+    p:"onChange\n1111111111"
   },{
     id:2,
     star:false,
     title:"信息安全竞赛\n",
-    p:"主要是在模仿wiznote的界面在实现\nheader和主要内容相互覆盖，暂时是用margin来处理，但是有些奇怪\n没有实现可编辑功能？？\n搜索框还是放在左边悬浮比较好"
+    p:"主要是在模仿wiznote的界面在实现\nheader和主要内容相互覆盖，暂时是用margin来处理，但是有些奇怪\n没有实现可编辑功能？？\n搜索框还是放在左边悬浮比较好\n1111111111"
   },{
     id:3,
     star:false,
     title:"计算机组成大作业",
-    p:"比较是用有符号数还是无符号数\n dw为什么只能0-9开头？？"
+    p:"比较是用有符号数还是无符号数\n dw为什么只能0-9开头？？\n10101010101"
   },{
     id:4,
     star:false,
     title:"汇编",
-    p:"push SI+2 这种写法不可取"
+    p:"push SI+2 这种写法不可取\n01010101010101"
   }
 ]
 
