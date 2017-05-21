@@ -69,16 +69,7 @@ class NoteList extends Component{
       <div id="notes-list">
       <div id="after-notes-list">
       <div id="list-header">
-        <h3>{this.state.title}</h3>
-      <div className="btn-group btn-group-justified" role="group">
-          <div className="btn-group" role="group">
-            <button type="button" className="btn btn-default" onClick={this.showAllNotes.bind(this)}>All Notes</button>
-          </div>
-
-        <div className="btn-group" role="group">
-          <button type="button" className="btn btn-default" onClick={this.filterStar.bind(this)}>Favorites</button>
-        </div>
-      </div>
+        <h4>{this.state.title}</h4>
 
       <div className="btn-group btn-group-justified" id="search" role="group">
         <div className="input-group search">

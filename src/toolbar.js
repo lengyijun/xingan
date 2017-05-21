@@ -34,13 +34,11 @@ class Toolbar extends Component{
     return(
       <section id="toolbar">
         <div id="firstgly">
-          <i className="glyphicon glyphicon-plus" onClick={x => this.props.addnotes("无标题","")}></i>
-          <i className="glyphicon glyphicon-star" onClick={x => this.props.star()}></i>
-          <i className="glyphicon glyphicon-remove" onClick={x => this.props.remove()}></i>
-          {/*<label onChange={this.handleClick.bind(this)}>*/}
-          {/*<input type="file" id="tohidinput" />*/}
-          {/*<i className="glyphicon glyphicon-upload" ></i>*/}
-          {/*</label>*/}
+          <i className="glyphicon glyphicon-plus-sign" onClick={x => this.props.addnotes("无标题","")}></i>
+          <i className="glyphicon glyphicon-search" ></i>
+          {/*<i className="glyphicon glyphicon-star-empty" onClick={x => this.props.star()}></i>*/}
+          <i className="glyphicon glyphicon-remove-circle" onClick={x => this.props.remove()}></i>
+          <i className="glyphicon glyphicon-refresh" ></i>
 
           <label onChange={this.handleClickfolder.bind(this)}>
           <input type="file" id="tohidinput" name="files[]" multiple />

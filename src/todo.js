@@ -11,15 +11,17 @@ class TODO extends Component{
     }
 
     return(
-      <li id="todo-item" style={listyle}>
+      <li id="todo-item" style={listyle} title={task.title}>
         <div className="view" onClick={function () {
           updateId(task.id)
         }}>
           <h4>
+            <i className="glyphicon glyphicon-book"></i>
             {task.title}
           </h4>
           <label>
-            {task.p.trim().substring(0,30)}
+            {task.p.trim()}
+            {/*{task.p}*/}
           </label>
         </div>
       </li>
