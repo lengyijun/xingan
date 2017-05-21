@@ -117,22 +117,27 @@ header #kbname{
   width: 400px;
 }
 
-#after-notes-list{
+#list-header{
   position: absolute;
-  top:40px;
-  bottom: 0;
-  width: inherit;
+  top:7px;
 }
-
-#search {
+#notes-list .input-group{
   position:relative;
   top:5px; /* 相比于原来的位置向下移动5px  */
+  height: 12px;
+}
+
+#after-notes-list{
+  position: absolute;
+  top:60px;
+  bottom: 0;
+  width: inherit;
 }
 
 /*notelist 里面的*/
 #container{
   position: absolute;
-  top: 100px;
+  top: 95px;
   bottom: 6px;
   width:400px;
   border: 1px solid #BBBCC4;

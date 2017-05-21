@@ -1,15 +1,15 @@
 import React,{Component,PropTypes} from 'react'
+import {connect} from 'react-redux'
 import TODO from './todo'
+import {star,add,onId,remove,updateById} from './action'
 
 class NoteList extends Component{
   componentWillMount(){
     const {notes}=this.props;
     this.state={
       localnotes:notes,
-      show:"ALL",
       inputvalue:"",
-      clickedid:0,
-      title:"SSE"
+      clickedid:0
     }
   }
   componentWillReceiveProps(nextProps){
@@ -21,6 +21,14 @@ class NoteList extends Component{
         inputvalue:""
       })
     }
+  }
+
+  search(x){
+    const {dispatch}=this.props
+    dispatch({
+      type:"SEARCH",
+      payload:{x}
+    })
   }
 
   filterStar(){
@@ -47,15 +55,19 @@ class NoteList extends Component{
   }
   
   handleItemClick(id){
-    const {updateId}=this.props
-    updateId(id)
+    this.updateId(id)
     this.setState({
       clickedid:id
     })
   }
 
+  updateId(x){
+    const {dispatch}=this.props
+    dispatch(onId(x))
+  }
+
   render(){
-    const {search,updateId}=this.props;
+    const {middleTitle}=this.props;
     var handleItemClick=this.handleItemClick
     var t=[]
     for(let i=0;i<this.state.localnotes.length;++i){
@@ -69,16 +81,14 @@ class NoteList extends Component{
       <div id="notes-list">
       <div id="after-notes-list">
       <div id="list-header">
-        <h4>{this.state.title}</h4>
+        <h4>{middleTitle}</h4>
 
-      <div className="btn-group btn-group-justified" id="search" role="group">
         <div className="input-group search">
           <input type="text" className="form-control" placeholder="Search for..." value={this.state.inputvalue} onChange={this.updateInputValue.bind(this)} />
           <span className="input-group-addon">
-            <i className="glyphicon glyphicon-search" onClick={x => {search(this.state.inputvalue);this.setState({title:"search "+this.state.inputvalue})}}></i>
+            <i className="glyphicon glyphicon-search" onClick={x => {this.search(this.state.inputvalue);this.setState({title:"search "+this.state.inputvalue})}}></i>
           </span>
         </div>
-      </div>
 
       </div>
 
@@ -93,11 +103,12 @@ class NoteList extends Component{
   }
 }
 
-NoteList.PropTypes={
-  notes: PropTypes.array.isRequired,
-  updateId:PropTypes.func.isRequired,
-  search:PropTypes.func.isRequired
+function mapPropToProps(state){
+  return{
+    notes: state.tasks,
+    middleTitle:state.middleTitle,
+    isnote:state.isnote
+  }
 }
 
-
-export default NoteList
+export default connect(mapPropToProps)(NoteList)

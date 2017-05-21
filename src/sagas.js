@@ -4,8 +4,8 @@ import axios from 'axios'
 import aesjs from 'aes-js'
 import dict1 from './b.js'
 
-// var baseurl="http://www.wangjksjtu.com.cn:2117/"
-var baseurl="http://localhost:8000/"
+var baseurl="http://www.wangjksjtu.com.cn:2117/"
+// var baseurl="http://localhost:8000/"
 function getinitialdata(){
   return axios.get(baseurl+"ciphertexts.json"
   ).then(function (req) {
@@ -40,9 +40,10 @@ function* initlocaldata(action){
 }
 
 function* finishsearch(action){
+    yield put({type:"UPDATETITLE",middleTitle:"Searching "+action.payload.x});
     const t=yield call(search,action.payload.x);
-    console.log(t)
     yield put({type:"UPDATE",tasks:t});
+    yield put({type:"UPDATETITLE",middleTitle:"Find "+t.length+" Results: "+action.payload.x});
 }
  
  function encrypt(text){

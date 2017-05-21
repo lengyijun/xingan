@@ -43,6 +43,7 @@ componentWillReceiveProps(nextProps){
       />
 
       <textarea
+        spellCheck="false" autoCapitalize="off" autoComplete="off" autoCorrect="off"
         value={p}
         onChange={this._onChangeContent.bind(this)}
         placeholder="请输入正文" >

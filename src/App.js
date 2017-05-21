@@ -8,7 +8,7 @@ import {star,add,onId,remove,updateById} from './action'
 class App extends Component{
   componentWillMount(){
     const{dispatch}=this.props;
-    dispatch({type:"INIT"})
+    // dispatch({type:"INIT"})
   }
 
 
@@ -43,9 +43,6 @@ class App extends Component{
                                      }}
         />
         <NoteList
-          notes={tasks}
-          updateId={x => dispatch(onId(x))}
-          search={x => dispatch({type:"SEARCH",payload:{x}})}
         />
         <Editor
           yournote={t}
@@ -64,7 +61,6 @@ App.PropTypes={
 function mapPropToProps(state){
   return{
     tasks: state.tasks,
-    isnewnote:state.isnewnote,
     isnote:state.isnote
   }
 }

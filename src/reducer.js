@@ -1,4 +1,4 @@
-import {STAR,UPDATE,ADD,UPDATEID,ONID,DELETE} from './action';
+import {UPDATETITLE,STAR,UPDATE,ADD,UPDATEID,ONID,DELETE} from './action';
 
 var tasks_init=[
   {
@@ -29,7 +29,7 @@ var tasks_init=[
   }
 ]
 
-function todos(state={tasks: tasks_init, isnote:0},action){
+function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE"},action){
   switch(action.type){
     case UPDATE:
       console.log("new data come")
@@ -70,6 +70,8 @@ function todos(state={tasks: tasks_init, isnote:0},action){
       })
       console.log(t)
       return {...state,tasks: t}
+    case UPDATETITLE:
+      return {...state,middleTitle:action.middleTitle}
     default:
       return state
   }

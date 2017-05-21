@@ -4,6 +4,7 @@ export const UPDATEID="UPDATEID"
 export const ONID="ONID"
 export const STAR="STAR"
 export const DELETE="DELETE"
+export const UPDATETITLE="UPDATETITLE"
 
 export function update(tasks){
   return{
@@ -41,8 +42,16 @@ export function star() {
     type:STAR
   }
 }
+
 export function remove(){
   return {
     type:DELETE
+  }
+}
+
+export function updatetitle(middleTitle){
+  return{
+    type:UPDATETITLE,
+    middleTitle
   }
 }
