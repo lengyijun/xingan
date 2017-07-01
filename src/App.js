@@ -22,7 +22,7 @@ class App extends Component{
         <header>
           <div id="kb-info">
           <h3 id="kbname">
-            SJTU SSE
+            SSE
           </h3>
           </div>
         </header>
