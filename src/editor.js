@@ -14,7 +14,7 @@ class Editor extends Component{
   }
 
 componentWillReceiveProps(nextProps){
-  const {updateById,yournote}=this.props
+  const {updateById}=this.props
   if("yournote" in nextProps){
     var t={title:this.state.title,p:this.state.p}
     updateById(this.state.oldisnote,t)

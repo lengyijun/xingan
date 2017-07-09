@@ -4,7 +4,7 @@ import axios from 'axios'
 import aesjs from 'aes-js'
 import dict1 from './b.js'
 
-var baseurl="http://www.wangjksjtu.com.cn:2117/"
+var baseurl="https://www.wangjksjtu.com.cn:2117/"
 // var baseurl="http://localhost:8000/"
 function getinitialdata(){
   return axios.get(baseurl+"ciphertexts.json"

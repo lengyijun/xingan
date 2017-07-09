@@ -1,7 +1,7 @@
-import React,{Component,PropTypes} from 'react'
+import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import TODO from './todo'
-import {star,add,onId,remove,updateById} from './action'
+import {onId} from './action'
 
 class NoteList extends Component{
   componentWillMount(){

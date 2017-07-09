@@ -1,0 +1,101 @@
+.navbar{
+    height: 44px;
+    position:fixed;
+    top:0;
+    z-index: 100;
+    opacity:1;
+    transition:background-color 0.2s;
+}
+
+.navbar-header{
+   float: left; 
+   box-sizing: border-box;
+   display: block;
+   color: black;
+}
+
+.navbar-brand{
+    display:inline-block;
+    margin-top: 15px;
+    width:136px;
+    height:48px;
+    /*background-image: "http://www.wiz.cn/www/img/logo_white.png";*/
+    background-size: cover;
+}
+
+.navbar-right{
+    float:right;
+}
+
+.navbar-nav{
+    clear:both;
+    list-style: none;
+    overflow:hidden;
+    padding-right: 15px;
+}
+
+.navbar-nav li{
+    float:left;
+    height:78px;
+    padding-top:24px;
+    margin:0;
+    paddding:0;
+}
+
+.navbar-nav li a{
+    display: inline-block;
+    color: #fff;
+    padding:3px 12px;
+    transition:color 0.2s;
+}
+
+.banner{
+    height:670px;
+    background: url("http://cdn.wiz.cn/www/img/index/banner_1.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    padding: 80px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.container{
+    margin-right:auto;
+    margin-left: auto;
+    max-width:1024px;
+}
+
+.col-xs-12{
+    width:100%;
+    float:left;
+    position:relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.banner h1{
+    color:#fff;
+    font-weight: normal;
+    font-size:48px;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    display:block;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+h1 small{
+    font-size:smaller;
+    color:#fff;
+}
+
+.banner p{
+    margin-top:19px;
+    margin-bottom:35px;
+    font-size:18px;
+    color:#fff;
+}

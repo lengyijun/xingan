@@ -1,13 +1,21 @@
 {
-  "name": "cats-n-stuff",
+  "name": "sse",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.4.2",
+    "aes-js": "^3.1.0",
+    "axios": "^0.16.2",
+    "history": "^4.6.3",
+    "react": "^15.5.5",
     "react-dom": "^15.4.2",
     "react-redux": "^4.0.2",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-tagcloud": "^1.2.0",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.7"
+    "redux-devtools": "^3.4.0",
+    "redux-saga": "^0.14.7",
+    "tagcloud": "^1.1.0-1"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

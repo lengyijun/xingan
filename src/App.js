@@ -3,12 +3,12 @@ import {connect} from 'react-redux'
 import Editor from './editor'
 import Toolbar from './toolbar'
 import NoteList from './notesList'
-import {star,add,onId,remove,updateById} from './action'
+import {star,add,remove,updateById} from './action'
 
 class App extends Component{
   componentWillMount(){
     const{dispatch}=this.props;
-    // dispatch({type:"INIT"})
+    dispatch({type:"INIT"})
   }
 
 
@@ -18,7 +18,8 @@ class App extends Component{
       return(x.id == isnote)
     })
     return(
-      <div>
+      <div
+      style={{ height: "100%"}}>
         <header>
           <div id="kb-info">
           <h3 id="kbname">

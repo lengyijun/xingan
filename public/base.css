@@ -84,9 +84,7 @@ header #kbname{
   padding-left: 11px;   /* 处于视觉效果  */
   padding-right: 10px;
   background-color: #FFF;
-  /*background-color: #E6EBF5;*/
-  /*color: #8D8D8D;*/
-  color:blue;
+  color:#989898;
   border: 1px solid #BBBCC4;
   bottom: 6px;
   top:60px;
@@ -137,7 +135,7 @@ header #kbname{
 /*notelist 里面的*/
 #container{
   position: absolute;
-  top: 95px;
+  top: 85px;
   bottom: 6px;
   width:400px;
   border: 1px solid #BBBCC4;
@@ -167,7 +165,7 @@ header #kbname{
   font-size: 14px;
   line-height: 1.35;
   white-space: nowrap;
-  color:#333;
+  color:#747474;
 }
 
 #todo-item h4 i{
@@ -197,12 +195,17 @@ header #kbname{
 }
 
 #note-editor input {
-  height: 48px;
+  height: 54px;
   width:100%;
   padding: 12px 10px;
   background-color: #FCFCFC;
   top: 0px;
   position: absolute;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #note-editor .tag-cloud{
   position: absolute;
