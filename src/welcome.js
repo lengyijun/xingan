@@ -25,7 +25,7 @@ class Welcome extends Component{
                             <li><a className="navbar-nav-link" >帮助支持</a></li>
                             <li><a className="navbar-nav-link" target="_blank">论坛</a></li>
                             <li><a className="navbar-nav-link" target="_blank">博客</a></li>
-                            <li><Link to="/app"><a className="navbar-nav-link" target="_blank">登录</a></Link></li>
+                            <li><Link to="/login"><a className="navbar-nav-link" target="_blank">登录</a></Link></li>
                             {/*<li className="navbar-nav-search">
                                 <input id="navbar-nav-search-value" type="text" placeholder="帮助搜索" />
                                 <a className="navbar-nav-search-btn" href="javascript:search();"><i className="fonts-icon icon-search"></i></a>
