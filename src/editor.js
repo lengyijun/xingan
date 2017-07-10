@@ -29,7 +29,8 @@ componentWillReceiveProps(nextProps){
   render(){
     var title=this.state.title
     var p=this.state.p
-    var keystring=p.split("\n").slice(-1).pop()
+    var keystring=this.state.t.keystring
+    console.log(keystring)
     return(
     <div id="note-editor">
     <div className="form-group" id="form-group">

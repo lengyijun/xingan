@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Editor from './editor'
 import Toolbar from './toolbar'
 import NoteList from './notesList'
-import {star,add,remove,updateById} from './action'
+import {add,remove,updateById} from './action'
 
 class App extends Component{
   componentWillMount(){
@@ -28,7 +28,6 @@ class App extends Component{
           </div>
         </header>
         <Toolbar
-          star={x => dispatch(star())}
           notes={tasks}
           remove={x => {dispatch(remove());
                         dispatch({
@@ -42,9 +41,9 @@ class App extends Component{
                                      });
                               dispatch(add(x,y))
                                      }}
+          append={x => {dispatch({type:"APPEND_SAGA"})}}
         />
-        <NoteList
-        />
+        <NoteList />
         <Editor
           yournote={t}
           isnote={this.props.isnote}

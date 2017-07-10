@@ -31,16 +31,6 @@ class NoteList extends Component{
     })
   }
 
-  filterStar(){
-    const {notes}=this.props;
-    var notea=notes.filter(function (x) {
-      return(x.star)
-    })
-    this.setState({
-      localnotes:notea
-    })
-  }
-
   showAllNotes(){
     const {notes}=this.props;
     this.setState({
@@ -72,7 +62,6 @@ class NoteList extends Component{
     var t=[]
     for(let i=0;i<this.state.localnotes.length;++i){
       var isClicked= this.state.localnotes[i].id == this.state.clickedid
-      console.log(isClicked)
       t.push(<TODO task={this.state.localnotes[i]}
         updateId={handleItemClick.bind(this)}
         isClicked={isClicked} />)

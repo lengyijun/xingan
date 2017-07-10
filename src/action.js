@@ -2,13 +2,20 @@ export const UPDATE='UPDATE'
 export const ADD='ADD'
 export const UPDATEID="UPDATEID"
 export const ONID="ONID"
-export const STAR="STAR"
 export const DELETE="DELETE"
 export const UPDATETITLE="UPDATETITLE"
+export const APPEND="APPEND"
 
 export function update(tasks){
   return{
     type: UPDATE,
+    tasks
+  }
+}
+
+export function append(tasks){
+  return{
+    type:APPEND,
     tasks
   }
 }
@@ -34,12 +41,6 @@ export function onId(id){
   return{
     type: ONID,
     id
-  }
-}
-
-export function star() {
-  return{
-    type:STAR
   }
 }
 

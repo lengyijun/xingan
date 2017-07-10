@@ -5,20 +5,22 @@ import aesjs from 'aes-js'
 import dict1 from './b.js'
 
 var baseurl="https://www.wangjksjtu.com.cn:2117/"
+var nexturl="https://www.wangjksjtu.com.cn:2117/ciphertexts/?page=2"
+
 function getinitialdata(){
   return axios.get(baseurl+"ciphertexts.json"
   ).then(function (req) {
-    return req.data.map(function (x){
+    return req.data.results.map(function (x){
       var a=decrypt(x.context).split("{{{")
-      console.log(a)
+      var paragraph=a[1].split("\n")
+      paragraph.splice(-1,1)  //删除最后的11010101串
       return {
         id: x.id,
         title: a[0],
-        star: false,
-        p:a[1]
+        p:paragraph.join("\n"),
+        keystring:x.keystring
       }
     })
-    // }).filter(function(x){return x.p!== ""}) //清除空数据
   }).catch(function (error) {
     console.log(error)
   })
@@ -34,7 +36,6 @@ function* deleteRemote(action){
 
 function* initlocaldata(action){
     const t=yield call(getinitialdata);
-    console.log(t)
     yield put({type:"UPDATE",tasks:t});
 }
 
@@ -101,7 +102,6 @@ function* finishsearch(action){
          return {
            id: x.id,
            title: a[0],
-           star: false,
            p: a[1]
          }
        })
@@ -114,11 +114,40 @@ function* finishsearch(action){
    }
  }
 
+function query(url){
+  return axios.get(url).
+    then(function (req) {
+      nexturl=req.data.next
+      return req.data.results.map(function (x) {
+        var a = decrypt(x.context).split("{{{")
+        var paragraph = a[1].split("\n")
+        paragraph.splice(-1, 1)  //删除最后的11010101串
+        return {
+          id: x.id,
+          title: a[0],
+          p: paragraph.join("\n"),
+          keystring: x.keystring
+        }
+      })
+    }).catch(function (error) {
+      console.log(error)
+    })
+
+}
+
+function * appendNote(action){
+    console.log("append note now ")
+    console.log(nexturl)
+    const t=yield call(query,nexturl);
+    yield put({type:"APPEND",tasks:t});
+}
+
 function* mySaga(){
   yield [
     takeEvery("INIT",initlocaldata), //初始化，获得所有数据
     takeEvery("DELREMOTE",deleteRemote), //删除
     takeEvery("ADDREMOTE",addonenote), //添加
+    takeEvery("APPEND_SAGA",appendNote), //添加
     takeLatest("SEARCH",finishsearch) //搜索
   ]
 }

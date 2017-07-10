@@ -36,9 +36,8 @@ class Toolbar extends Component{
         <div id="firstgly">
           <i className="glyphicon glyphicon-plus-sign" onClick={x => this.props.addnotes("无标题","")}></i>
           <i className="glyphicon glyphicon-search" ></i>
-          {/*<i className="glyphicon glyphicon-star-empty" onClick={x => this.props.star()}></i>*/}
           <i className="glyphicon glyphicon-remove-circle" onClick={x => this.props.remove()}></i>
-          <i className="glyphicon glyphicon-refresh" ></i>
+          <i className="glyphicon glyphicon-refresh" onClick={x => this.props.append()}></i>
 
           <label onChange={this.handleClickfolder.bind(this)}>
           <input type="file" id="tohidinput" name="files[]" multiple />
@@ -52,7 +51,6 @@ class Toolbar extends Component{
 Toolbar.PropTypes={
   addnotes:PropTypes.func,
   notes:PropTypes.array,
-  star:PropTypes.func,
   remove:PropTypes.func
 }
 export default Toolbar
