@@ -51,7 +51,8 @@
 
 .banner{
     height:670px;
-    background: url("http://cdn.wiz.cn/www/img/index/banner_1.jpg") no-repeat center center;
+    /*background: url("http://cdn.wiz.cn/www/img/index/banner_1.jpg") no-repeat center center;*/
+    background: url("http://imglf1.ph.126.net/UdCYkf6scSb1r0d7ixjD-w==/3361655646955553944.jpg") no-repeat center center;
     background-size: 100% 100%;
     padding: 80px;
     padding-left: 20px;

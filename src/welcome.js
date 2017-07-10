@@ -21,7 +21,6 @@ class Welcome extends Component{
                         <ul className="navbar-nav navbar-right">
                             <li><a className="navbar-nav-link active" href="/">首页</a></li>
                             <li><a className="navbar-nav-link" >团队服务</a></li>
-                            <li><a className="navbar-nav-link" >为知盒子</a></li>
                             <li><a className="navbar-nav-link" >帮助支持</a></li>
                             <li><a className="navbar-nav-link" target="_blank">论坛</a></li>
                             <li><a className="navbar-nav-link" target="_blank">博客</a></li>
@@ -37,9 +36,9 @@ class Welcome extends Component{
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12">
-                                <h1><small>大脑是用来思考的,记录的事交给我们</small></h1>
+                                <h1><small>蒹葭苍苍，白露为霜</small></h1>
 
-                                <p>一键收藏、全端全文检索、多级目录、Markdown</p>
+                                <p>所谓伊人，在水一方</p>
                             </div>
                         </div>
                     </div>
