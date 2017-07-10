@@ -35,7 +35,7 @@ class Login extends Component{
                                     <div className="form-control submitBtn">
                                         <div className="col">
                                             <Link to="/app">
-                                                <a id="loginbtn" data-lang="common.label.login" class="btn btn-primary disabled">登录</a>
+                                                <a id="loginbtn" data-lang="common.label.login" className="btn btn-primary disabled">登录</a>
                                             </Link>
                                         </div>
                                     </div>

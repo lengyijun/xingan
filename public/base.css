@@ -218,6 +218,7 @@ header #kbname{
 }
 #note-editor textarea {
   top: 90px;
+  padding: 10px;
   bottom: 6px;
   margin-top: 2px;
   position: absolute;
@@ -225,7 +226,6 @@ header #kbname{
   overflow: hidden;
   border: 0;
   border-radius: 0;
-  padding-top: 15px;
   overflow: auto;
   border: 1px solid #BBBCC4;
 }
