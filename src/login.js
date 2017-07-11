@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom'
 class Login extends Component{
     render(){
         return(
-           <div>
+           <div style={{"height":"100%","background":"white"}}>
                <header id="login-header">
                     <div id="kb-info">
                         <h3 id="kbname">

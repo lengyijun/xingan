@@ -4,7 +4,7 @@ var tasks_init=[
   {
     id:0,
     title:"hello title",
-    keystring:"101010101001",
+    keystring:"10101010100111111111111111111111111111111111111111111111111111",
     p:"reducer componentWillMount\ncomponentWillReceiveProps\nstyle=\"display: none\";\nhover事件\n11111111111"
   },{
     id:1,

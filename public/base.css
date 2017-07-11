@@ -108,6 +108,7 @@ header #kbname{
 #tohidinput {
   display: none;
 }
+
 #notes-list {
   position: relative;
   margin-left: 12px;
@@ -142,6 +143,7 @@ header #kbname{
   border: 1px solid #BBBCC4;
   overflow-x: auto;
 }
+
 #note-editor{
   margin-left: 488px;
   margin-right: 16px;
@@ -208,7 +210,8 @@ header #kbname{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#note-editor .tag-cloud{
+
+.tag-cloud{
   position: absolute;
   top: 50px;
   width: 100%;
@@ -216,6 +219,11 @@ header #kbname{
   border: 1px solid #BBBCC4;
   margin-top: 2px;
 }
+
+.tag-cloud span{
+  cursor: pointer;
+}
+
 #note-editor textarea {
   top: 90px;
   padding: 10px;
