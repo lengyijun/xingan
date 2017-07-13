@@ -1,0 +1,28 @@
+/*树上的节点*/
+.red {
+	/*fill: red;*/
+	/*stroke: red;*/
+	transform: translate(466.645, 208.632);
+}
+
+.red circle{
+	fill:"#F25A29";
+	cx:0;
+	cy:0;
+	stroke:"#DC4717";
+	stroke-width: 2px;
+}
+
+.red text{
+	text-anchor:"middle";
+}
+
+.leaf{
+	fill:green;
+	stroke: green;
+}
+
+.treeroot{
+    fill:blue;
+    stroke:blue;
+}

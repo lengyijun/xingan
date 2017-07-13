@@ -8,6 +8,7 @@ import {
 import App from './App'
 import Welcome from './welcome'
 import Login from './login'
+import TreeDemo from './treedemo'
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware} from 'redux'
 import todo from './reducer'
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route exact path="/app" component={App}/>
         <Route exact path="/" component={Welcome}/>
         <Route exact path="/login" component={Login} />
+        <Route exact path="/tree" component={TreeDemo} />
       </div>
     </Router>
   </Provider>,
