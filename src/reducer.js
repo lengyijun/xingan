@@ -3,9 +3,9 @@ import {UPDATETITLE,UPDATE,ADD,UPDATEID,ONID,DELETE,APPEND} from './action';
 var tasks_init=[
   {
     id:0,
-    title:"hello title",
+    title:"hello 咸",
     keystring:"10101010100111111111111111111111111111111111111111111111111111",
-    p:"reducer componentWillMount\ncomponentWillReceiveProps\nstyle=\"display: none\";\nhover事件\n11111111111"
+    p:"这里写一句欢迎语，因为正好会打开这条笔记"
   },{
     id:1,
     title:"e.target.value",
