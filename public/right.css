@@ -1,6 +1,10 @@
 .menu-active #vis{
+  background: white;
   right: 0px;
   z-index: 1000;
+  top:60px;
+  bottom:6px;
+  border: 1px solid #BBBCC4;
 }
 
 /*.menu-active nav#slide-menu ul {
@@ -26,6 +30,7 @@
 }
 
 #vis{
+  background: white;
   position: fixed;
   top:0;
   bottom: 0;
@@ -33,4 +38,7 @@
   width: 100%;
   right: -400px;
   z-index: 1000;
+  border: 1px solid #BBBCC4;
+  top:60px;
+  bottom:6px;
 }

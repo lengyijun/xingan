@@ -43,6 +43,21 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
+                <div class="forge" id="DIV_1">
+                    <div class="container" id="DIV_2">
+                        <div class="row" id="DIV_3">
+                            <div class="col-sm-7 col-sm-push-5" id="DIV_4">
+                                <img class="img-responsive" src="http://cdn.wiz.cn/www/img/index/forge.png" alt="" has_check_key_word="true" id="IMG_5" />
+                            </div>
+                            <div class="col-sm-5 col-sm-pull-7" id="DIV_6">
+                                <h2 id="H2_7">打造你的专属资料库 </h2>
+
+                                <p id="P_8">收集网页内容、书摘、聊天片段等碎片化信息，记录想法、待办事项、个人日记、工作日志、会议记录和项目资料，将这些内容分类别保存到为知笔记中，打造你的专属资料库。 </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
