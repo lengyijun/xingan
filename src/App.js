@@ -4,6 +4,8 @@ import Editor from './editor'
 import Toolbar from './toolbar'
 import NoteList from './notesList'
 import {add,remove,updateById} from './action'
+import TreeDemo from './treedemo'
+import Vis from './vis'
 
 class App extends Component{
   componentWillMount(){
@@ -27,6 +29,7 @@ class App extends Component{
           </h3>
           </div>
         </header>
+        <div id="left">
         <Toolbar
           notes={tasks}
           remove={x => {dispatch(remove());
@@ -49,6 +52,10 @@ class App extends Component{
           isnote={this.props.isnote}
           updateById={(x,y) => dispatch(updateById(x,y))}
         />
+        </div>
+        
+        <Vis />
+        {/*<TreeDemo />*/}
       </div>
     )
   }

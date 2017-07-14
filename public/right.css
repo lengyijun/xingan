@@ -1,0 +1,36 @@
+.menu-active #vis{
+  right: 0px;
+  z-index: 1000;
+}
+
+/*.menu-active nav#slide-menu ul {
+  left: 0px;
+  opacity: 1;
+}*/
+
+.menu-active #left{
+  right: 400px;
+  border-radius: 7px 0 0 7px;
+}
+
+/*.menu-active div#content .menu-trigger {
+  left: 294px;
+}*/
+
+#left{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+#vis{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  max-width: 400px;
+  width: 100%;
+  right: -400px;
+  z-index: 1000;
+}
