@@ -15,7 +15,15 @@ class Toolbar extends Component{
     handleClickfolder(event) {
       const {addnotes}=this.props
       var files = event.target.files;
-      for (var i = 0, len = files.length; i < len; i++) {
+      var i=0;
+      
+      (function timeout() {
+        setTimeout(function () {
+          console.log(i)
+          if(i>=files.length){
+            console.log("return")
+            return
+          }
         var file = files[i];
         var reader = new FileReader();
         reader.onload = (function (f) { //一个声明即执行的函数，返回一个函数
@@ -27,7 +35,11 @@ class Toolbar extends Component{
         })(file);
 
         reader.readAsText(file);
-      }
+        i+=1;
+          timeout();
+        }, 10000);
+})()
+
     }
 
   render(){

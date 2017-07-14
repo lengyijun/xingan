@@ -4,21 +4,29 @@ import axios from 'axios'
 import aesjs from 'aes-js'
 import dict1 from './b.js'
 
-var baseurl="https://www.wangjksjtu.com.cn:2117/"
-var nexturl="https://www.wangjksjtu.com.cn:2117/ciphertexts/?page=2"
+// var baseurl="https://www.wangjksjtu.com.cn:2118/"
+var baseurl="http://115.159.88.104:2118/"
+var nexturl="https://www.wangjksjtu.com.cn:2118/ciphertext/?page=2"
 
 function getinitialdata(){
-  return axios.get(baseurl+"ciphertexts.json"
+  return axios.get(baseurl+"ciphertext/?page=1"
   ).then(function (req) {
-    return req.data.results.map(function (x){
-      var a=decrypt(x.context).split("{{{")
+    return req.data.map(function (x){
+      console.log(x)
+      var a=decrypt(x.content).split("{{{")
       var paragraph=a[1].split("\n")
       paragraph.splice(-1,1)  //删除最后的11010101串
+      console.log({
+        id: x.id,
+        title: a[0],
+        p:paragraph.join("\n"),
+        keystring:x.keys
+      })
       return {
         id: x.id,
         title: a[0],
         p:paragraph.join("\n"),
-        keystring:x.keystring
+        keystring:x.keys
       }
     })
   }).catch(function (error) {
@@ -29,7 +37,7 @@ function getinitialdata(){
 function* deleteRemote(action){
   console.log(action)
   console.log("delete "+action.payload.id)
-  return fetch(baseurl+"ciphertexts/"+action.payload.id+"/",{
+  return fetch(baseurl+"ciphertext/"+action.payload.id+"/",{
     method:"DELETE"
   }).then(res=>console.log(res))
 }
@@ -68,20 +76,21 @@ function* finishsearch(action){
  }
 
 
- function * addonenote(action){ //todo ,keystring需要再这里计算出来
+ function * addonenote(action){ //todo ,keys需要再这里计算出来
     console.log("add one note")
+    console.log("keys : "+action.payload.keystring)
     var a=encrypt(action.payload.x+"{{{"+action.payload.y)
 
-    return axios.post(baseurl+"ciphertexts/",{
-      keystring:action.payload.keystring,
-      context:a
+    return axios.post(baseurl+"ciphertext/",{
+      content:a,
+      keys:action.payload.keystring
     }).then(res => console.log(res))
  }
 
  //sample ?key=1|3|8-2|4
- function search(keystring) {
-   console.log("searching " + keystring)
-   var keyarr=keystring.split(" ")
+ function search(keys) {
+   console.log("searching " + keys)
+   var keyarr=keys.split(" ")
    var a=""
    for (var i = 0; i < keyarr.length; ++i) {
      var b=dict1[keyarr[i]]
@@ -94,10 +103,10 @@ function* finishsearch(action){
    if (a !== "") {
      a=a.substring(0,a.length-1) //remove the last |
      console.log(a)
-     return axios.get(baseurl+"ciphertexts/?key=" + a
+     return axios.get(baseurl+"ciphertext/?key=" + a
      ).then(function (req) {
        return req.data.map(function (x) {
-         var a = decrypt(x.context).split("{{{")
+         var a = decrypt(x.content).split("{{{")
          console.log(a)
          return {
            id: x.id,
@@ -119,14 +128,14 @@ function query(url){
     then(function (req) {
       nexturl=req.data.next
       return req.data.results.map(function (x) {
-        var a = decrypt(x.context).split("{{{")
+        var a = decrypt(x.content).split("{{{")
         var paragraph = a[1].split("\n")
         paragraph.splice(-1, 1)  //删除最后的11010101串
         return {
           id: x.id,
           title: a[0],
           p: paragraph.join("\n"),
-          keystring: x.keystring
+          keystring: x.keys
         }
       })
     }).catch(function (error) {
