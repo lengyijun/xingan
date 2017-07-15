@@ -3,29 +3,9 @@ import {UPDATETITLE,UPDATE,ADD,UPDATEID,ONID,DELETE,APPEND} from './action';
 var tasks_init=[
   {
     id:0,
-    title:"hello 咸",
+    title:"hello 鲜",
     keystring:"10101010100111111111111111111111111111111111111111111111111111",
     p:"这里写一句欢迎语，因为正好会打开这条笔记"
-  },{
-    id:1,
-    title:"e.target.value",
-    keystring:"101010101001",
-    p:"onChange\n1111111111"
-  },{
-    id:2,
-    title:"信息安全竞赛\n",
-    keystring:"101010101001",
-    p:"主要是在模仿wiznote的界面在实现\nheader和主要内容相互覆盖，暂时是用margin来处理，但是有些奇怪\n没有实现可编辑功能？？\n搜索框还是放在左边悬浮比较好\n1111111111"
-  },{
-    id:3,
-    title:"计算机组成大作业",
-    keystring:"101010101001",
-    p:"比较是用有符号数还是无符号数\n dw为什么只能0-9开头？？\n10101010101"
-  },{
-    id:4,
-    title:"汇编",
-    keystring:"101010101001",
-    p:"push SI+2 这种写法不可取\n01010101010101"
   }
 ]
 

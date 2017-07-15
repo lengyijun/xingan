@@ -51,8 +51,7 @@
 
 .banner{
     height:670px;
-    /*background: url("http://cdn.wiz.cn/www/img/index/banner_1.jpg") no-repeat center center;*/
-    background: url("http://imglf1.ph.126.net/UdCYkf6scSb1r0d7ixjD-w==/3361655646955553944.jpg") no-repeat center center;
+    background:url("http://img.hb.aicdn.com/ad4c7729e2cbc7059ab1a39413191eb1a86a4d593dc6c-gXx5J2_fw658") no-repeat center center;
     background-size: 100% 100%;
     padding: 80px;
     padding-left: 20px;
@@ -89,7 +88,7 @@
     -webkit-margin-end: 0px;
 }
 
-h1 small{
+.col-xs-12 h1 small{
     font-size:smaller;
     color:#fff;
 }
@@ -271,5 +270,202 @@ h1 small{
     margin: 0px;
     outline: rgb(102, 102, 102) none 0px;
 }/*#P_8*/
+
+#DIV_11 {
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    height: 462px;
+    text-decoration: none solid rgb(102, 102, 102);
+    /*width: 853px;*/
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 426.5px 231px;
+    transform-origin: 426.5px 231px;
+    caret-color: rgb(102, 102, 102);
+    background: rgb(245, 252, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+    padding: 103px 0px 80px;
+}/*#DIV_1*/
+
+#DIV_21 {
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    height: 279px;
+    max-width: 1024px;
+    text-decoration: none solid rgb(102, 102, 102);
+    width: 853px;
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 426.5px 139.5px;
+    transform-origin: 426.5px 139.5px;
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+}/*#DIV_2*/
+
+#DIV_31 {
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    height: 279px;
+    text-decoration: none solid rgb(102, 102, 102);
+    width: 853px;
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 426.5px 139.5px;
+    transform-origin: 426.5px 139.5px;
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+}/*#DIV_3*/
+
+#DIV_31:after {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(102, 102, 102);
+    content: '""';
+    display: table;
+    text-decoration: none solid rgb(102, 102, 102);
+    column-rule-color: rgb(102, 102, 102);
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+}/*#DIV_3:after*/
+
+#DIV_31:before {
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    content: '""';
+    display: table;
+    text-decoration: none solid rgb(102, 102, 102);
+    column-rule-color: rgb(102, 102, 102);
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+}/*#DIV_3:before*/
+
+#DIV_41 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    float: left;
+    height: 246px;
+    left: 0px;
+    min-height: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(102, 102, 102);
+    top: 0px;
+    width: 497.578px;
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 248.781px 123px;
+    transform-origin: 248.781px 123px;
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+    padding: 0px 15px;
+}/*#DIV_4*/
+
+#IMG_51 {
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    display: inline-block;
+    height: 243px;
+    max-width: 100%;
+    text-decoration: none solid rgb(102, 102, 102);
+    width: 309.133px;
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 233.781px 121.5px;
+    transform-origin: 233.781px 121.5px;
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+}/*#IMG_5*/
+
+#DIV_61 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    float: left;
+    height: 279px;
+    left: 0px;
+    min-height: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(102, 102, 102);
+    top: 0px;
+    width: 355.406px;
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 177.703px 139.5px;
+    transform-origin: 177.703px 139.5px;
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(102, 102, 102) none 0px;
+    padding: 0px 15px;
+}/*#DIV_6*/
+
+#H2_71 {
+    box-sizing: border-box;
+    color: rgb(68, 138, 255);
+    height: 96px;
+    text-decoration: none solid rgb(68, 138, 255);
+    width: 325.406px;
+    column-rule-color: rgb(68, 138, 255);
+    perspective-origin: 162.703px 48px;
+    transform-origin: 162.703px 48px;
+    caret-color: rgb(68, 138, 255);
+    border: 0px none rgb(68, 138, 255);
+    font: normal normal normal normal 32px / 48px "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    margin: 6px 0px 27px;
+    outline: rgb(68, 138, 255) none 0px;
+}/*#H2_7*/
+
+#BR_81 {
+    box-sizing: border-box;
+    color: rgb(68, 138, 255);
+    text-decoration: none solid rgb(68, 138, 255);
+    column-rule-color: rgb(68, 138, 255);
+    caret-color: rgb(68, 138, 255);
+    border: 0px none rgb(68, 138, 255);
+    font: normal normal normal normal 32px / 48px "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(68, 138, 255) none 0px;
+}/*#BR_8*/
+
+#P_91 {
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    height: 150px;
+    text-decoration: none solid rgb(102, 102, 102);
+    width: 325.406px;
+    column-rule-color: rgb(102, 102, 102);
+    perspective-origin: 162.703px 75px;
+    transform-origin: 162.703px 75px;
+    caret-color: rgb(102, 102, 102);
+    border: 0px none rgb(102, 102, 102);
+    font: normal normal normal normal 18px / 30px "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    margin: 0px;
+    outline: rgb(102, 102, 102) none 0px;
+}/*#P_9*/
+
+#A_101 {
+    box-sizing: border-box;
+    color: rgb(68, 138, 255);
+    text-decoration: none solid rgb(68, 138, 255);
+    column-rule-color: rgb(68, 138, 255);
+    user-select: none;
+    caret-color: rgb(68, 138, 255);
+    border: 0px none rgb(68, 138, 255);
+    font: normal normal normal normal 18px / 30px "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
+    outline: rgb(68, 138, 255) none 0px;
+}/*#A_101*/
+
+
 
 

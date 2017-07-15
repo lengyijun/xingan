@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
 import {Link } from 'react-router-dom'
+import qianduanlogo from '../img/qianduanlogo.jpg'
+import hdlogo from '../img/hdlogo.png'
 
 class Welcome extends Component{
     render(){
@@ -47,7 +49,7 @@ class Welcome extends Component{
                     <div class="container" id="DIV_2">
                         <div class="row" id="DIV_3">
                             <div class="col-sm-7 col-sm-push-5" id="DIV_4">
-                                <img class="img-responsive" src="http://cdn.wiz.cn/www/img/index/forge.png" alt="" has_check_key_word="true" id="IMG_5" />
+                                <img class="img-responsive" src={qianduanlogo} alt="" has_check_key_word="true" id="IMG_5" />
                             </div>
                             <div class="col-sm-5 col-sm-pull-7" id="DIV_6">
                                 <h2 id="H2_7">打造你的专属资料库 </h2>
@@ -58,6 +60,21 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
+                <div class="team" id="DIV_11">
+    <div class="container" id="DIV_21">
+        <div class="row" id="DIV_31">
+            <div class="col-sm-7" id="DIV_41">
+                <img class="img-responsive" src={hdlogo} alt="" has_check_key_word="true" id="IMG_51"/>
+            </div>
+            <div class="col-sm-5" id="DIV_61">
+                <h2 class="team-h2-first" id="H2_71">使用团队服务多人一起共享资料 </h2>
+
+                <p id="P_91">和团队成员一起使用，分享工作资料、收集成员意见、搭建团队知识库、发送通知公告等；和客户一起使用，为客户提供全平台资料服务；和家人一起使用，共享家庭资料。<a href="biz.html" has_check_key_word="true" id="A_101">了解更多&gt;&gt;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
 
 
