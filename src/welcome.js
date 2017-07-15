@@ -2,6 +2,9 @@ import React,{Component} from 'react'
 import {Link } from 'react-router-dom'
 import qianduanlogo from '../img/qianduanlogo.jpg'
 import hdlogo from '../img/hdlogo.png'
+import jianjia from '../img/jianjia.jpg'
+import jiaoda from '../img/jiaoda.jpg'
+import lib from '../img/lib.jpg'
 
 class Welcome extends Component{
     render(){
@@ -34,7 +37,7 @@ class Welcome extends Component{
                         </ul>
                     </div>
                 </div>
-                <div className="banner">
+                <div className="banner" style={{background:`url(${jiaoda}) no-repeat center center`}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12">
