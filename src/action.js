@@ -5,6 +5,15 @@ export const ONID="ONID"
 export const DELETE="DELETE"
 export const UPDATETITLE="UPDATETITLE"
 export const APPEND="APPEND"
+export const GRAPH="GRAPH"
+
+export function graphaction(graph){
+  return{
+    type:GRAPH,
+    graph
+
+  }
+}
 
 export function update(tasks){
   return{

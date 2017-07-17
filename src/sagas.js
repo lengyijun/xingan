@@ -144,6 +144,24 @@ function query(url){
 
 }
 
+function querygraphjson(){
+  return axios.get(baseurl+"graph/").
+    then(function (req) {
+      console.log(req)
+      return req.data
+    }).catch(function (error) {
+      console.log(error)
+    })
+
+}
+
+function * getGraphJson(){
+    console.log("query graph json")
+    const graphjson=yield call(querygraphjson);
+    yield put({type:"GRAPH",graph:graphjson});
+
+}
+
 function * appendNote(action){
     console.log("append note now ")
     console.log(nexturl)
@@ -157,8 +175,10 @@ function* mySaga(){
     takeEvery("DELREMOTE",deleteRemote), //删除
     takeEvery("ADDREMOTE",addonenote), //添加
     takeEvery("APPEND_SAGA",appendNote), //添加
-    takeLatest("SEARCH",finishsearch) //搜索
+    takeLatest("SEARCH",finishsearch), //搜索
+    takeEvery("SAGAGRAPH",getGraphJson) //搜索
   ]
 }
+
 
 export default mySaga;

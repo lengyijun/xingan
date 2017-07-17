@@ -6,13 +6,26 @@ import NoteList from './notesList'
 import {add,remove,updateById} from './action'
 import TreeDemo from './treedemo'
 import Vis from './vis'
+import hengda from '../img/hengda.png'
 
 class App extends Component{
   componentWillMount(){
     const{dispatch}=this.props;
     dispatch({type:"INIT"})
+    this.setState({
+      sidebar:true
+    })
   }
 
+  toggleSidebar() {
+    console.log(this.state.sidebar)
+    console.log(document.body.classList)
+    document.body.classList.toggle("menu-active", this.state.sidebar)
+    this.setState({
+      sidebar: !this.state.sidebar
+
+    })
+  }
 
   render(){
     const{dispatch,tasks,isnote}=this.props;
@@ -27,6 +40,10 @@ class App extends Component{
           <h3 id="kbname">
             SSE
           </h3>
+          </div>
+          <div onClick={this.toggleSidebar.bind(this)}  style={{width:"200px",height:"40px",position:"absolute",right:"0px",top:0,padding:"0 23px",paddingRight:0}}>
+            <i className="glyphicon glyphicon-circle-arrow-left" style={{position:"relative",float:"right",height:"40px",width:"40px",fontSize:"30px",marginTop:"3px"}} />
+              <img src={hengda} style={{width:"34px",height:"34px",marginTop:"3px",position:"relative",float:"right",marginRight:"15px"}}/>
           </div>
         </header>
         <div id="left">

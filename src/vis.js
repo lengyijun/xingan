@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
 import Graph from 'react-graph-vis'
+import {connect} from 'react-redux'
+import axios from 'axios'
 
 class Vis extends Component {
+     componentWillMount(){ 
+        const{dispatch,graphjson}=this.props; 
+        console.log(graphjson)
+        dispatch({type:"SAGAGRAPH"}) 
+        this.setState({ 
+            graphjson:graphjson
+        }) 
+        dispatch({type:"SAGAGRAPH"})
+    } 
+	
+
     render() {
-        var graph = {
-            nodes: [
-                { id: 1, label: '',color: '#e04141' },
-                { id: 2, label: 'root',color: '#e09c41' },
-                { id: 3, label: '1' ,color: '#e0df41'},
-                { id: 4, label: '2' , color: '#7be041'},
-                { id: 5, label: '3', color: '#41e0c9' }
-            ],
-            edges: [
-                { from: 1, to: 2 },
-                { from: 1, to: 3 },
-                { from: 2, to: 4 },
-                { from: 2, to: 5 }
-            ]
-        };
         var options = {
             layout: {
                 hierarchical: true
@@ -35,10 +33,16 @@ class Vis extends Component {
 
         return (
             <div id="vis">
-                <Graph graph={graph} options={options} events={events} />
+                <Graph graph={this.state.graphjson} options={options} events={events} />
             </div>
         )
     }
 }
 
-export default Vis
+function mapPropToProps(state){
+  return{
+      graphjson:state.graphjson
+  }
+}
+
+export default connect(mapPropToProps)(Vis)

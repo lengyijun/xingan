@@ -35,8 +35,8 @@ body, input, textarea {
 }
 
 header{
-  /*position: absolute;  TODO:毁掉了界面。。。  */
-  position: fixed;
+  position: absolute;  /*TODO:毁掉了界面。。。  */
+  /*position: fixed;*/
   font-size: 14px;
   color: #FFF;
   background: #448aff;
