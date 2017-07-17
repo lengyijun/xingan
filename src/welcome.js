@@ -48,11 +48,11 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
-                <div class="forge" id="DIV_1">
-                    <div class="container" id="DIV_2">
-                        <div class="row" id="DIV_3">
-                            <div class="col-sm-7 col-sm-push-5" id="DIV_4">
-                                <img class="img-responsive" src={qianduanlogo} alt="" has_check_key_word="true" id="IMG_5" />
+                <div className="forge" id="DIV_1">
+                    <div className="container" id="DIV_2">
+                        <div className="row" id="DIV_3">
+                            <div className="col-sm-7 col-sm-push-5" id="DIV_4">
+                                <img className="img-responsive" src={qianduanlogo} alt="" has_check_key_word="true" id="IMG_5" />
                             </div>
                             <div class="col-sm-5 col-sm-pull-7" id="DIV_6">
                                 <h2 id="H2_7">打造你的专属资料库 </h2>
