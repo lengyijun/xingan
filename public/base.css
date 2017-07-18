@@ -145,8 +145,10 @@ header #kbname{
 }
 
 #note-editor{
-  margin-left: 488px;
-  margin-right: 16px;
+  float: left;
+  width: calc( 100% - 500px );
+  margin-left: 13px;
+  /*margin-right: 16px;*/
   height: 100%;
   position: relative;
   /*background-color: #FCFCFC;*/
