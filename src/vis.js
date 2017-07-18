@@ -11,10 +11,15 @@ class Vis extends Component {
         this.setState({ 
             graphjson:graphjson
         }) 
-        dispatch({type:"SAGAGRAPH"})
     } 
-	
 
+    componentWillReceiveProps(nextProps){
+        console.log("vis new data")
+        this.setState({
+            graphjson:nextProps.graphjson
+        })
+    }
+	
     render() {
         var options = {
             layout: {
@@ -30,6 +35,7 @@ class Vis extends Component {
                 var { nodes, edges } = event;
             }
         }
+        console.log(this.state.graphjson)
 
         return (
             <div id="vis">
@@ -41,7 +47,7 @@ class Vis extends Component {
 
 function mapPropToProps(state){
   return{
-      graphjson:state.graphjson
+      graphjson:{nodes:state.nodes,edges:state.edges}
   }
 }
 

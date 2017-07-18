@@ -7,10 +7,12 @@ export const UPDATETITLE="UPDATETITLE"
 export const APPEND="APPEND"
 export const GRAPH="GRAPH"
 
-export function graphaction(graph){
+export function graphaction(edges,nodes){
   return{
     type:GRAPH,
-    graph
+    nodes,
+    edges,
+    // graph
 
   }
 }

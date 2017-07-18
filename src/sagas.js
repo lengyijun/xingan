@@ -158,7 +158,7 @@ function querygraphjson(){
 function * getGraphJson(){
     console.log("query graph json")
     const graphjson=yield call(querygraphjson);
-    yield put({type:"GRAPH",graph:graphjson});
+    yield put({type:"GRAPH",edges:graphjson.edges,nodes:graphjson.nodes});
 
 }
 
