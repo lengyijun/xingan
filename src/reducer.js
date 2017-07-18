@@ -10,11 +10,11 @@ var tasks_init=[
 ]
 
       var nodes= [
-          { id: 1, label: '',color: '#e04141' },
-          { id: 2, label: 'root',color: '#e09c41' },
-          { id: 3, label: '1' ,color: '#e0df41'},
-          { id: 4, label: '2' , color: '#7be041'},
-          { id: 5, label: '3', color: '#41e0c9' }
+          { id: 1, label: '',color: '#e04141',title:"hello id 1" },
+          { id: 2, label: 'root',color: '#e09c41' ,title:"id 2"},
+          { id: 3, label: '1' ,color: '#e0df41',title:"id 3"},
+          { id: 4, label: '2' , color: '#7be041',title:"id 4"},
+          { id: 5, label: '3', color: '#41e0c9' ,title:"id 5"}
       ]
 
       var edges= [

@@ -13,7 +13,7 @@
 }*/
 
 .menu-active #left{
-  right: 400px;
+  right: 600px;
   border-radius: 7px 0 0 7px;
 }
 
@@ -34,11 +34,15 @@
   position: fixed;
   top:0;
   bottom: 0;
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
-  right: -400px;
+  right: -600px;
   z-index: 1000;
   border: 1px solid #BBBCC4;
   top:60px;
   bottom:6px;
+}
+
+.vis-tooltip{
+  z-index: 5000
 }

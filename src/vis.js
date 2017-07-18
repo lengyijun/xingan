@@ -6,7 +6,6 @@ import axios from 'axios'
 class Vis extends Component {
      componentWillMount(){ 
         const{dispatch,graphjson}=this.props; 
-        console.log(graphjson)
         dispatch({type:"SAGAGRAPH"}) 
         this.setState({ 
             graphjson:graphjson
@@ -22,20 +21,35 @@ class Vis extends Component {
 	
     render() {
         var options = {
+            height:"600px",
+            interaction:{
+                hover:true
+            },
             layout: {
-                hierarchical: true
+                hierarchical:{
+                     sortMethod : 'directed'  //保证root在最上面
+                }
             },
             edges: {
                 color: "#000000"
-            }
+            },
         };
 
         var events = {
             select: function (event) {
                 var { nodes, edges } = event;
+                console.log("event in visjs")
+                console.log(nodes)
+                console.log(edges)
+            },
+            hoverNode:function(event){
+                console.log("hover ")
+                console.log(event)
+            },
+            showPopup:function(event){
+                console.log("show popup "+event)
             }
         }
-        console.log(this.state.graphjson)
 
         return (
             <div id="vis">
