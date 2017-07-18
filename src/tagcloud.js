@@ -13,7 +13,7 @@ class MyTagCloud extends Component {
 
         const keystring = this.props.keystring
         for (var i = 0; i < keystring.length; ++i) {
-            if (keystring.charAt(i) - '0') {
+            if (keystring.charAt(i) - '0' && arr[i]!=undefined) {
                 data.push({
                     value: arr[i],
                     count: 10
