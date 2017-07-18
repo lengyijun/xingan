@@ -24,15 +24,23 @@ var tasks_init=[
           { from: 2, to: 5 }
       ]
 
-function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,edges:edges},action){
+function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,edges:edges,id2handleid:{}},action){
   switch(action.type){
     case GRAPH:
       console.log("reducer graph")
+      var a=action.nodes.filter((x)=>x.handle_id)  //选择有handle_id的node
+      var c={}
+      a.map(function(x){
+        console.log(typeof(x.id))
+        c[x.id]=x.handle_id
+      })
+      console.log(a)
       // return {...state,nodes:[...state.nodes,...action.nodes]}
       return Object.assign({},state,{
         // isnote:100,
         nodes:action.nodes,
-        edges:action.edges
+        edges:action.edges,
+        id2handleid:c
       })
     case UPDATE:  //更新所有笔记
       console.log("reducer new data come")

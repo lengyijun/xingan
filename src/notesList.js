@@ -61,7 +61,7 @@ class NoteList extends Component{
     var handleItemClick=this.handleItemClick
     var t=[]
     for(let i=0;i<this.state.localnotes.length;++i){
-      var isClicked= this.state.localnotes[i].id == this.state.clickedid
+      var isClicked= this.state.localnotes[i].id === this.state.clickedid
       t.push(<TODO task={this.state.localnotes[i]}
         updateId={handleItemClick.bind(this)}
         isClicked={isClicked} />)

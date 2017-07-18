@@ -9,7 +9,7 @@ import lib from '../img/lib.jpg'
 class Welcome extends Component{
     render(){
         return (
-            <div>
+            <div style={{background:"white"}}>
                 <div className="navbar navbar-fixed-top ">
                     {/*<div className="navbar-header">
                         <a className="navbar-brand" href="/"></a>
