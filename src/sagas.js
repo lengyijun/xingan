@@ -4,14 +4,13 @@ import axios from 'axios'
 import aesjs from 'aes-js'
 import dict1 from './b.js'
 
-// var baseurl="https://www.wangjksjtu.com.cn:2118/"
 var baseurl="http://115.159.88.104:2118/"
 var nexturl="https://www.wangjksjtu.com.cn:2118/ciphertext/?page=2"
 
 function getinitialdata(){
   return axios.get(baseurl+"ciphertext/?page=1"
   ).then(function (req) {
-    return req.data.map(function (x){
+    return req.data.results.map(function (x){
       console.log(x)
       var a=decrypt(x.content).split("{{{")
       var paragraph=a[1].split("\n")
@@ -77,8 +76,7 @@ function* finishsearch(action){
 
 
  function * addonenote(action){ //todo ,keys需要再这里计算出来
-    console.log("add one note")
-    console.log("keys : "+action.payload.keystring)
+    console.log("axios post a note")
     var a=encrypt(action.payload.x+"{{{"+action.payload.y)
 
     return axios.post(baseurl+"ciphertext/",{

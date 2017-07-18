@@ -54,7 +54,7 @@ class Welcome extends Component{
                             <div className="col-sm-7 col-sm-push-5" id="DIV_4">
                                 <img className="img-responsive" src={qianduanlogo} alt="" has_check_key_word="true" id="IMG_5" />
                             </div>
-                            <div class="col-sm-5 col-sm-pull-7" id="DIV_6">
+                            <div className="col-sm-5 col-sm-pull-7" id="DIV_6">
                                 <h2 id="H2_7">打造你的专属资料库 </h2>
 
                                 <p id="P_8">收集网页内容、书摘、聊天片段等碎片化信息，记录想法、待办事项、个人日记、工作日志、会议记录和项目资料，将这些内容分类别保存到为知笔记中，打造你的专属资料库。 </p>
@@ -63,14 +63,14 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
-                <div class="team" id="DIV_11">
-    <div class="container" id="DIV_21">
-        <div class="row" id="DIV_31">
-            <div class="col-sm-7" id="DIV_41">
-                <img class="img-responsive" src={hdlogo} alt="" has_check_key_word="true" id="IMG_51"/>
+                <div className="team" id="DIV_11">
+    <div className="container" id="DIV_21">
+        <div classNaem="row" id="DIV_31">
+            <div className="col-sm-7" id="DIV_41">
+                <img className="img-responsive" src={hdlogo} alt="" has_check_key_word="true" id="IMG_51"/>
             </div>
-            <div class="col-sm-5" id="DIV_61">
-                <h2 class="team-h2-first" id="H2_71">使用团队服务多人一起共享资料 </h2>
+            <div className="col-sm-5" id="DIV_61">
+                <h2 className="team-h2-first" id="H2_71">使用团队服务多人一起共享资料 </h2>
 
                 <p id="P_91">和团队成员一起使用，分享工作资料、收集成员意见、搭建团队知识库、发送通知公告等；和客户一起使用，为客户提供全平台资料服务；和家人一起使用，共享家庭资料。<a href="biz.html" has_check_key_word="true" id="A_101">了解更多&gt;&gt;</a>
                 </p>
