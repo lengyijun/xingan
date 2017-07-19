@@ -11,9 +11,9 @@ class MyTagCloud extends Component {
             // { value: "jQuery", count: 25 }, { value: "MongoDB", count: 18 },
         ];
 
-        const keystring = this.props.keystring
-        for (var i = 0; i < keystring.length; ++i) {
-            if (keystring.charAt(i) - '0' && arr[i]!==undefined) {
+        const keys = this.props.keys
+        for (var i = 0; i < keys.length; ++i) {
+            if (keys.charAt(i) - '0' && arr[i]!==undefined) {
                 data.push({
                     value: arr[i],
                     count: 10

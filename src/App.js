@@ -65,9 +65,9 @@ class App extends Component{
                             payload:{id:isnote}
                         })
           }}
-          addnotes={(x,y,keystring) => {dispatch({
+          addnotes={(x,y,keys) => {dispatch({
                                       type:"ADDREMOTE",
-                                      payload:{x,y,keystring}
+                                      payload:{x,y,keys}
                                      });
                               dispatch(add(x,y))
                                      }}

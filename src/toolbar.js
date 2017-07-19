@@ -36,8 +36,8 @@ class Toolbar extends Component{
         reader.onload = (function (f) { //一个声明即执行的函数，返回一个函数
           return function (e) {
             var content = this.result
-            var keystring = content.split('\n').slice(-1).pop()
-            addnotes(f.name, content, keystring)
+            var keys = content.split('\n').slice(-1).pop()
+            addnotes(f.name, content, keys)
           };
         })(file);
 

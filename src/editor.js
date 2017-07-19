@@ -9,28 +9,32 @@ class Editor extends Component{
         oldisnote:isnote,
         t:yournote,
         title:yournote.title,
-        p:yournote.p
+        p:yournote.p,
+        keys:yournote.keys
       }
   }
 
 componentWillReceiveProps(nextProps){
   const {updateById}=this.props
   if("yournote" in nextProps){
+    console.log("in next prop ---------------------")
+    console.log(nextProps.yournote)
     var t={title:this.state.title,p:this.state.p}
     updateById(this.state.oldisnote,t)
     this.setState({
       oldisnote:nextProps.isnote,
       t:nextProps.yournote,
       title:nextProps.yournote.title,
-      p:nextProps.yournote.p
+      p:nextProps.yournote.p,
+      keys:nextProps.yournote.keys
     })
   }
 }
   render(){
     var title=this.state.title
     var p=this.state.p
-    var keystring=this.state.t.keystring
-    console.log(keystring)
+    var keys=this.state.keys
+    console.log(keys)
     return(
     <div id="note-editor">
     <div className="form-group" id="form-group">
@@ -40,7 +44,7 @@ componentWillReceiveProps(nextProps){
       onChange={this._onChangeTitle.bind(this)}
       placeholder="请输入标题" />
       <TagCloud 
-        keystring={keystring}
+        keys={keys}
       />
 
       <textarea

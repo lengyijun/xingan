@@ -19,13 +19,13 @@ function getinitialdata(){
         id: x.id,
         title: a[0],
         p:paragraph.join("\n"),
-        keystring:x.keys
+        keys:x.keys
       })
       return {
         id: x.id,
         title: a[0],
         p:paragraph.join("\n"),
-        keystring:x.keys
+        keys:x.keys
       }
     })
   }).catch(function (error) {
@@ -81,7 +81,7 @@ function* finishsearch(action){
 
     return axios.post(baseurl+"ciphertext/",{
       content:a,
-      keys:action.payload.keystring
+      keys:action.payload.keys
     }).then(res => console.log(res))
  }
 
@@ -103,13 +103,14 @@ function* finishsearch(action){
      console.log(a)
      return axios.get(baseurl+"ciphertext/?key=" + a
      ).then(function (req) {
-       return req.data.map(function (x) {
+       return req.data.results.map(function (x) {
          var a = decrypt(x.content).split("{{{")
          console.log(a)
          return {
            id: x.id,
            title: a[0],
-           p: a[1]
+           p: a[1],
+           keys:x.keys
          }
        })
      }).catch(function (error) {
@@ -133,7 +134,7 @@ function query(url){
           id: x.id,
           title: a[0],
           p: paragraph.join("\n"),
-          keystring: x.keys
+          keys: x.keys
         }
       })
     }).catch(function (error) {
