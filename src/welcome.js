@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {Link } from 'react-router-dom'
 import qianduanlogo from '../img/qdlogo.png'
-import hdlogo from '../img/hdlogo.png'
+import hdlogo from '../img/hdlogo.jpg'
 import jiaoda from '../img/jiaoda.jpg'
 import wikiimg from '../img/wiki.jpg'
 import miaomen from '../img/miaomen.jpg'
