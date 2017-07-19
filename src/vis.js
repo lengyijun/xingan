@@ -65,17 +65,17 @@ class Vis extends Component {
 
         var events = {
             select: function (event) {
-                var { nodes, edges } = event;
+                // var { nodes, edges } = event;
                 // console.log("event in visjs")
                 // console.log(nodes)
                 // console.log(edges)
             },
             hoverNode:function(event){
-                // console.log("hover ")
-                // console.log(event)
+                console.log("hover ")
+                console.log(event)
             },
             showPopup:function(event){
-                // console.log("show popup "+event)
+                console.log("show popup "+event)
             },
             selectNode:function(event){
                 var handleid=event.nodes[0]

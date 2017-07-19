@@ -60,9 +60,9 @@ function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,
       console.log("update id")
       var t=state.tasks
       var index=t.findIndex(function (x) {
-        return(x.id==action.id)
+        return(x.id===action.id)
       })
-      if(index != -1){
+      if(index !== -1){
         t[index]["title"]=action.data.title
         t[index]["p"]=action.data.p
         return {...state,tasks: t}
@@ -74,7 +74,7 @@ function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,
       return {...state,isnote:action.id}
     case DELETE:
       var t=state.tasks.filter(function(x){
-        return(x.id != state.isnote)
+        return(x.id !== state.isnote)
       })
       console.log(t)
       return {...state,tasks: t}

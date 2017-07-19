@@ -8,7 +8,7 @@ import {
 import App from './App'
 import Welcome from './welcome'
 import Login from './login'
-import TreeDemo from './treedemo'
+// import TreeDemo from './treedemo'
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware} from 'redux'
 import todo from './reducer'

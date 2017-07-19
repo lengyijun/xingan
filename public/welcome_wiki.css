@@ -1,106 +1,4 @@
-.navbar{
-    height: 44px;
-    position:fixed;
-    top:0;
-    z-index: 100;
-    opacity:1;
-    transition:background-color 0.2s;
-}
-
-.navbar-header{
-   float: left; 
-   box-sizing: border-box;
-   display: block;
-   color: black;
-}
-
-.navbar-brand{
-    display:inline-block;
-    margin-top: 15px;
-    width:136px;
-    height:48px;
-    /*background-image: "http://www.wiz.cn/www/img/logo_white.png";*/
-    background-size: cover;
-}
-
-.navbar-right{
-    float:right;
-}
-
-.navbar-nav{
-    clear:both;
-    list-style: none;
-    overflow:hidden;
-    padding-right: 15px;
-}
-
-.navbar-nav li{
-    float:left;
-    height:78px;
-    padding-top:24px;
-    margin:0;
-    paddding:0;
-}
-
-.navbar-nav li a{
-    display: inline-block;
-    color: #fff;
-    padding:3px 12px;
-    transition:color 0.2s;
-}
-
-.banner{
-    height:670px;
-    /*background:url("http://img.hb.aicdn.com/ad4c7729e2cbc7059ab1a39413191eb1a86a4d593dc6c-gXx5J2_fw658") no-repeat center center;*/
-    background-size: 100% 100%;
-    padding: 80px;
-    padding-left: 20px;
-    box-sizing: border-box;
-}
-
-.container{
-    margin-right:auto;
-    margin-left: auto;
-    max-width:1024px;
-}
-
-.col-xs-12{
-    width:100%;
-    float:left;
-    position:relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-}
-
-.banner h1{
-    color:#fff;
-    font-weight: normal;
-    font-size:48px;
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    display:block;
-    -webkit-margin-before: 0.67em;
-    -webkit-margin-after: 0.67em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-.col-xs-12 h1 small{
-    font-size:smaller;
-    color:#fff;
-}
-
-.banner p{
-    margin-top:19px;
-    margin-bottom:35px;
-    font-size:18px;
-    color:#fff;
-}
-
-#DIV_1 {
+#wikiDIV_1 {
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -115,9 +13,9 @@
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
     padding: 104px 0px 74px;
-}/*#DIV_1*/
+}/*#wikiDIV_1*/
 
-#DIV_2 {
+#wikiDIV_2 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     height: 394px;
@@ -131,9 +29,9 @@
     border: 0px none rgb(102, 102, 102);
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
-}/*#DIV_2*/
+}/*#wikiDIV_2*/
 
-#DIV_3 {
+#wikiDIV_3 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     height: 394px;
@@ -146,10 +44,10 @@
     border: 0px none rgb(102, 102, 102);
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
-}/*#DIV_3*/
+}/*#wikiDIV_3*/
 
 
-#DIV_4 {
+#wikiDIV_4 {
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -170,9 +68,9 @@
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
     padding: 0px 15px;
-}/*#DIV_4*/
+}/*#wikiDIV_4*/
 
-#IMG_5 {
+#wikiIMG_5 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     display: inline-block;
@@ -189,7 +87,7 @@
     outline: rgb(102, 102, 102) none 0px;
 }/*#IMG_5*/
 
-#DIV_6 {
+#wikiDIV_6 {
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -210,7 +108,7 @@
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
     padding: 0px 15px;
-}/*#DIV_6*/
+}/*#wikiDIV_6*/
 
 #H2_7 {
     box-sizing: border-box;
@@ -245,7 +143,7 @@
     outline: rgb(102, 102, 102) none 0px;
 }/*#P_8*/
 
-#DIV_11 {
+#wikiDIV_11 {
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -261,9 +159,9 @@
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
     padding: 103px 0px 80px;
-}/*#DIV_1*/
+}/*#wikiDIV_1*/
 
-#DIV_21 {
+#wikiDIV_21 {
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -278,9 +176,9 @@
     border: 0px none rgb(102, 102, 102);
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
-}/*#DIV_2*/
+}/*#wikiDIV_2*/
 
-#DIV_31 {
+#wikiDIV_31 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     height: 279px;
@@ -293,9 +191,9 @@
     border: 0px none rgb(102, 102, 102);
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
-}/*#DIV_3*/
+}/*#wikiDIV_3*/
 
-#DIV_41 {
+#wikiDIV_41 {
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -316,7 +214,7 @@
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
     padding: 0px 15px;
-}/*#DIV_4*/
+}/*#wikiDIV_4*/
 
 #IMG_51 {
     box-sizing: border-box;
@@ -335,7 +233,7 @@
     outline: rgb(102, 102, 102) none 0px;
 }/*#IMG_5*/
 
-#DIV_61 {
+#wikiDIV_61 {
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
@@ -356,7 +254,7 @@
     font: normal normal normal normal 12px / normal "Helvetica Neue", "Microsoft Yahei", 微软雅黑, Helvetica, SimSun, SimHei;
     outline: rgb(102, 102, 102) none 0px;
     padding: 0px 15px;
-}/*#DIV_6*/
+}/*#wikiDIV_6*/
 
 #H2_71 {
     box-sizing: border-box;

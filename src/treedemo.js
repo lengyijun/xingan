@@ -1,5 +1,5 @@
 import Tree from 'react-tree-graph';
-import React,{Component,PropTypes} from 'react'
+import React,{Component} from 'react'
 import 'react-tree-graph/dist/style.css'
 
 let data = {

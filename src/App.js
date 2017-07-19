@@ -4,7 +4,7 @@ import Editor from './editor'
 import Toolbar from './toolbar'
 import NoteList from './notesList'
 import {add,remove,updateById} from './action'
-import TreeDemo from './treedemo'
+// import TreeDemo from './treedemo'
 import Vis from './vis'
 import hengda from '../img/hengda.png'
 
@@ -40,7 +40,7 @@ class App extends Component{
   render(){
     const{dispatch,tasks,isnote}=this.props;
     var t=tasks.find(function (x) {
-      return(x.id == isnote)
+      return(x.id === isnote)
     })
     return(
       <div
