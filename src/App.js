@@ -48,7 +48,7 @@ class App extends Component{
         <header>
           <div id="kb-info">
           <h3 id="kbname">
-            SSE
+            SJTU-SSE
           </h3>
           </div>
           <div onClick={this.toggleSidebar.bind(this)}  style={{width:"200px",height:"40px",position:"absolute",right:"0px",top:0,padding:"0 23px",paddingRight:0}}>

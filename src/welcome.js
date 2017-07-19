@@ -4,6 +4,7 @@ import qianduanlogo from '../img/qdlogo.png'
 import hdlogo from '../img/hdlogo.png'
 import jiaoda from '../img/jiaoda.jpg'
 import wikiimg from '../img/wiki.jpg'
+import miaomen from '../img/miaomen.jpg'
 
 class Welcome extends Component{
     render(){
@@ -16,12 +17,13 @@ class Welcome extends Component{
                             <li><a className="navbar-nav-link" >团队服务</a></li>
                             <li><a className="navbar-nav-link" >帮助支持</a></li>
                             <li><a className="navbar-nav-link" target="_blank">论坛</a></li>
-                            <li><a className="navbar-nav-link" target="_blank">博客</a></li>
+                            <li><a className="navbar-nav-link" href="http://115.159.88.104:7474/browser/" target="_blank">后端数据库</a></li>
                             <li><Link to="/login"><a className="navbar-nav-link" target="_blank">登录</a></Link></li>
                         </ul>
                     </div>
                 </div>
-                <div className="banner" style={{ background: `url(${jiaoda}) no-repeat center center` }}>
+                {/*<div className="banner" style={{ background: `url(${jiaoda}) no-repeat center center`,"background-size":"100% 100%" }}>*/}
+                <div className="banner" style={{ background: `url(${miaomen}) no-repeat center center`,"background-size":"100% 100%" }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12">
