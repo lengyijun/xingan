@@ -13,7 +13,7 @@
 }*/
 
 .menu-active #left{
-  right: 600px;
+  right: 50%;
   border-radius: 7px 0 0 7px;
 }
 
@@ -34,9 +34,9 @@
   position: fixed;
   top:0;
   bottom: 0;
-  max-width: 600px;
+  max-width: 50%;
   width: 100%;
-  right: -600px;
+  right: -50%;
   z-index: 1000;
   border: 1px solid #BBBCC4;
   top:60px;
