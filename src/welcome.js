@@ -43,65 +43,44 @@ class Welcome extends Component{
                             <div class="col-sm-4 col-xs-6" id="dmDIV_7">
                                 <img class="img-responsive center-block" src="www/img/index/collect.png" alt="" id="IMG_8" />
 
-                                <h3 id="H3_9">收集</h3>
+                                <h3 id="H3_9">加密</h3>
 
-                                <p id="P_10">我想这里介绍一下项目的特色，需要配图</p>
-                            </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_11">
-                                <img class="img-responsive center-block" src="www/img/index/note.png" alt="" id="IMG_12" />
-
-                                <h3 id="H3_13">记录</h3>
-
-                                <p id="P_14">以文字、清单、图片、拍照、语音等形式记录，一次记录永久保存。</p>
-                            </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_15">
-                                <img class="img-responsive center-block" src="www/img/index/edit.png" alt="" id="IMG_16" />
-
-                                <h3 id="H3_17">编辑</h3>
-
-                                <p id="P_18">遵循Office习惯的轻量级编辑工具，同时支持Markdown，帮你写出漂亮的文档。</p>
-                            </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_19">
-                                <img class="img-responsive center-block" src="www/img/index/save.png" alt="" id="IMG_20" />
-
-                                <h3 id="H3_21">保存</h3>
-
-                                <p id="P_22">资料永久保存在云端，修改后的笔记会保存历史版本，无需担心资料丢失。</p>
-                            </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_23">
-                                <img class="img-responsive center-block" src="www/img/index/arrange.png" alt="" id="IMG_24" />
-
-                                <h3 id="H3_25">整理</h3>
-
-                                <p id="P_26">使用群组、多级文件夹、标签和笔记内链整理资料，让资料井井有条。</p>
+                                <p id="P_10">可信赖的守护你的数据</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_27">
                                 <img class="img-responsive center-block" src="www/img/index/search.png" alt="" id="IMG_28" />
 
                                 <h3 id="H3_29">查找</h3>
 
-                                <p id="P_30">通过文件夹、关键词搜索、快捷方式、近期笔记和消息等方式快速找到所需资料。</p>
+                                <p id="P_30">云端通过关键词搜索，支持组合搜索</p>
                             </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_31">
-                                <img class="img-responsive center-block" src="www/img/index/share.png" alt="" id="IMG_32" />
+                            <div class="col-sm-4 col-xs-6" id="dmDIV_11">
+                                <img class="img-responsive center-block" src="www/img/index/note.png" alt="" id="IMG_12" />
 
-                                <h3 id="H3_33">共享</h3>
+                                <h3 id="H3_13">动态</h3>
 
-                                <p id="P_34">用链接、QQ、微信等方式分享资料给任何人，用群组和团队成员一起共享资料。</p>
+                                <p id="P_14">重新定义了更新索引的方法 </p>
                             </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_35">
-                                <img class="img-responsive center-block" src="www/img/index/discuss.png" alt="" id="IMG_36" />
+                            <div class="col-sm-4 col-xs-6" id="dmDIV_15">
+                                <img class="img-responsive center-block" src="www/img/index/edit.png" alt="" id="IMG_16" />
 
-                                <h3 id="H3_37">讨论</h3>
+                                <h3 id="H3_17">效率</h3>
 
-                                <p id="P_38">团队成员直接评论笔记，针对这篇笔记的工作讨论集中保存在评论中。</p>
+                                <p id="P_18">平衡树保证了O(n)的搜索复杂度</p>
                             </div>
-                            <div class="col-sm-4 col-xs-6" id="dmDIV_39">
-                                <img class="img-responsive center-block" src="www/img/index/multiPlatform.png" alt="" id="IMG_40" />
+                            <div class="col-sm-4 col-xs-6" id="dmDIV_19">
+                                <img class="img-responsive center-block" src="www/img/index/save.png" alt="" id="IMG_20" />
 
-                                <h3 id="H3_41">多平台支持</h3>
+                                <h3 id="H3_21">图数据库</h3>
 
-                                <p id="P_42">支持Windows、Mac、Linux、iPhone、iPad、Android等平台，随时随地使用。</p>
+                                <p id="P_22">资料永久保存在图数据库，支持并行搜索</p>
+                            </div>
+                            <div class="col-sm-4 col-xs-6" id="dmDIV_23">
+                                <img class="img-responsive center-block" src="www/img/index/arrange.png" alt="" id="IMG_24" />
+
+                                <h3 id="H3_25">操作</h3>
+
+                                <p id="P_26">支持上传，新建，更新，删除笔记操作</p>
                             </div>
                         </div>
                     </div>
