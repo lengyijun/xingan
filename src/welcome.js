@@ -45,12 +45,12 @@ class Welcome extends Component{
 
                                 <h3 id="H3_9">加密</h3>
 
-                                <p id="P_10">可信赖的守护你的数据</p>
+                                <p id="P_10">在密文上计算，完美保证数据安全</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_27">
                                 <img class="img-responsive center-block" src="www/img/index/search.png" alt="" id="IMG_28" />
 
-                                <h3 id="H3_29">查找</h3>
+                                <h3 id="H3_29">可搜索</h3>
 
                                 <p id="P_30">云端通过关键词搜索，支持组合搜索</p>
                             </div>
@@ -94,7 +94,7 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="DIV_6">
                                 <h2 id="H2_7">前端</h2>
 
-                                <p id="P_8">这里讲一下前端的实现</p>
+                                <p id="P_8">模块化设计，实时展现数据库状态</p>
                             </div>
 
                         </div>
@@ -123,7 +123,7 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="wikiDIV_6">
                                 <h2 id="H2_7">测试数据</h2>
 
-                                <p id="P_8">测试数据来自于wikipedia</p>
+                                <p id="P_8">完美支持中英文论文、邮件、笔记全文搜索，这里需要换张图</p>
                             </div>
                         </div>
                     </div>
