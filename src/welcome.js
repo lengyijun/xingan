@@ -5,6 +5,7 @@ import hdlogo from '../img/hdlogo.jpg'
 import jiaoda from '../img/jiaoda.jpg'
 import wikiimg from '../img/wiki.jpg'
 import miaomen from '../img/miaomen.jpg'
+import baofenyu from '../img/baofenyu.jpg'
 
 import chaozuo from '../img/icon/操作.png'
 import dongtai from '../img/icon/动态.png'
@@ -30,13 +31,13 @@ class Welcome extends Component{
                     </div>
                 </div>
                 {/*<div className="banner" style={{ background: `url(${jiaoda}) no-repeat center center`,"background-size":"100% 100%" }}>*/}
-                <div className="banner" style={{ background: `url(${miaomen}) no-repeat center center`,"background-size":"100% 100%" }}>
+                <div className="banner" style={{ background: `url(${baofenyu}) no-repeat center center`,"background-size":"100% 100%" }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12">
-                                <h1><small>蒹葭苍苍，白露为霜</small></h1>
+                                <h1><small>海燕</small></h1>
 
-                                <p>所谓伊人，在水一方</p>
+                                <p>让暴风雨来得更猛烈些吧！</p>
                             </div>
                         </div>
                     </div>
