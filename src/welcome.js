@@ -14,10 +14,10 @@ class Welcome extends Component{
                     <div className="navbar-nav-collapse" id="navbar-link">
                         <ul className="navbar-nav navbar-right">
                             <li><a className="navbar-nav-link active" href="/">首页</a></li>
-                            <li><a className="navbar-nav-link" >团队服务</a></li>
                             <li><a className="navbar-nav-link" href="https://github.com/sjtu-lyj/xingan" target="_blank">前端</a></li>
                             <li><a className="navbar-nav-link" href="https://github.com/wangjksjtu/SJTU-SSE" target="_blank">后端</a></li>
                             <li><a className="navbar-nav-link" href="http://115.159.88.104:7474/browser/" target="_blank">数据库</a></li>
+                            <li><a className="navbar-nav-link" href="http://115.159.88.104:2118/" target="_blank">管理</a></li>
                             <li><Link to="/login"><a className="navbar-nav-link" target="_blank">登录</a></Link></li>
                         </ul>
                     </div>
@@ -109,7 +109,7 @@ class Welcome extends Component{
                             <div className="col-sm-5" id="DIV_61">
                                 <h2 className="team-h2-first" id="H2_71">后端</h2>
 
-                                <p id="P_91">后端实现</p>
+                                <p id="P_91">王靖康需要想一句话</p>
                             </div>
                         </div>
                     </div>
@@ -121,9 +121,9 @@ class Welcome extends Component{
                                 <img className="img-responsive" src={wikiimg} alt="" has_check_key_word="true" id="wikiIMG_5" />
                             </div>
                             <div className="col-sm-5 col-sm-pull-7" id="wikiDIV_6">
-                                <h2 id="H2_7">测试数据</h2>
+                                <h2 id="H2_7">数据</h2>
 
-                                <p id="P_8">完美支持中英文论文、邮件、笔记全文搜索，这里需要换张图</p>
+                                <p id="P_8">中英文论文、邮件、笔记全文搜索</p>
                             </div>
                         </div>
                     </div>

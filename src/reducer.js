@@ -31,7 +31,6 @@ function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,
       var a=action.nodes.filter((x)=>x.handle_id)  //选择有handle_id的node
       var c={}
       a.map(function(x){
-        console.log(typeof(x.id))
         c[x.id]=x.handle_id
       })
       console.log(a)
