@@ -1,4 +1,4 @@
-import { fork,call, put, takeEvery, takeLatest,all } from 'redux-saga/effects'
+import {call, put, takeEvery, takeLatest} from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import fetch from 'isomorphic-fetch'
 import axios from 'axios'
@@ -28,7 +28,6 @@ function getinitialdata(){
 }
 
 function* deleteRemote(action){
-  console.log(action)
   console.log("delete "+action.payload.id)
   return fetch(baseurl+"ciphertext/"+action.payload.id+"/",{
     method:"DELETE"
