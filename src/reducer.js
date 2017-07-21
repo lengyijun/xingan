@@ -27,16 +27,32 @@ var tasks_init=[
 function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,edges:edges,id2handleid:{}},action){
   switch(action.type){
     case GRAPH:
+    console.log(action.nodes.length==state.nodes.length)
+    console.log(action.nodes.every((v,i)=>JSON.stringify(v) ===JSON.stringify(state.nodes[i])) )
+    console.log(action.edges.length==state.edges.length )
+    // console.log(action.edges.every((v,i)=> JSON.stringify(v) ===JSON.stringify(state.edges[i])))
+    console.log(action.edges)
+    console.log(state.edges)
+
+    if(
+    action.nodes.length==state.nodes.length 
+    && 
+    action.nodes.every((v,i)=>JSON.stringify(v) ===JSON.stringify(state.nodes[i])) 
+    &&
+    action.edges.length==state.edges.length 
+    // && action.edges.every((v,i)=> JSON.stringify(v) ===JSON.stringify(state.edges[i]))  //节点和边的数量都相同，树应该是一样的
+    ){
+      console.log("the same")
+      return state
+    }
       console.log("reducer graph")
       var a=action.nodes.filter((x)=>x.handle_id)  //选择有handle_id的node
       var c={}
       a.map(function(x){
         c[x.id]=x.handle_id
       })
-      console.log(a)
       // return {...state,nodes:[...state.nodes,...action.nodes]}
       return Object.assign({},state,{
-        // isnote:100,
         nodes:action.nodes,
         edges:action.edges,
         id2handleid:c

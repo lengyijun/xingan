@@ -6,6 +6,13 @@ import jiaoda from '../img/jiaoda.jpg'
 import wikiimg from '../img/wiki.jpg'
 import miaomen from '../img/miaomen.jpg'
 
+import chaozuo from '../img/icon/操作.png'
+import dongtai from '../img/icon/动态.png'
+import jiami from '../img/icon/加密.png'
+import liantong from '../img/icon/连通.png'
+import sousuo from '../img/icon/搜索.png'
+import xiaolv from '../img/icon/效率.png'
+
 class Welcome extends Component{
     render(){
         return (
@@ -41,42 +48,42 @@ class Welcome extends Component{
                         </div>
                         <div class="row" id="dmDIV_6">
                             <div class="col-sm-4 col-xs-6" id="dmDIV_7">
-                                <img class="img-responsive center-block" src="www/img/index/collect.png" alt="" id="IMG_8" />
+                                <img class="img-responsive center-block" src={jiami} alt="" id="IMG_8" />
 
                                 <h3 id="H3_9">加密</h3>
 
                                 <p id="P_10">在密文上计算，完美保证数据安全</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_27">
-                                <img class="img-responsive center-block" src="www/img/index/search.png" alt="" id="IMG_28" />
+                                <img class="img-responsive center-block" src={sousuo} alt="" id="IMG_28" />
 
                                 <h3 id="H3_29">可搜索</h3>
 
                                 <p id="P_30">云端通过关键词搜索，支持组合搜索</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_11">
-                                <img class="img-responsive center-block" src="www/img/index/note.png" alt="" id="IMG_12" />
+                                <img class="img-responsive center-block" src={dongtai} alt="" id="IMG_12" />
 
                                 <h3 id="H3_13">动态</h3>
 
                                 <p id="P_14">重新定义了更新索引的方法 </p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_15">
-                                <img class="img-responsive center-block" src="www/img/index/edit.png" alt="" id="IMG_16" />
+                                <img class="img-responsive center-block" src={xiaolv} alt="" id="IMG_16" />
 
                                 <h3 id="H3_17">效率</h3>
 
                                 <p id="P_18">平衡树保证了O(n)的搜索复杂度</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_19">
-                                <img class="img-responsive center-block" src="www/img/index/save.png" alt="" id="IMG_20" />
+                                <img class="img-responsive center-block" src={liantong} alt="" id="IMG_20" />
 
                                 <h3 id="H3_21">图数据库</h3>
 
                                 <p id="P_22">资料永久保存在图数据库，支持并行搜索</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_23">
-                                <img class="img-responsive center-block" src="www/img/index/arrange.png" alt="" id="IMG_24" />
+                                <img class="img-responsive center-block" src={chaozuo} alt="" id="IMG_24" />
 
                                 <h3 id="H3_25">操作</h3>
 
