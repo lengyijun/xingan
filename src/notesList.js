@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import TODO from './todo'
-import {onId} from './action'
+import {onId,updatetitle} from './action'
 
 class NoteList extends Component{
   componentWillMount(){
@@ -56,6 +56,12 @@ class NoteList extends Component{
     dispatch(onId(x))
   }
 
+  handleDoubleClick(){
+    const {dispatch}=this.props
+    dispatch(updatetitle("SSE"))
+    dispatch({type:"INIT"})
+  }
+
   render(){
     const {middleTitle}=this.props;
     var handleItemClick=this.handleItemClick
@@ -69,7 +75,7 @@ class NoteList extends Component{
     return(
       <div id="notes-list">
       <div id="after-notes-list">
-      <div id="list-header">
+      <div id="list-header" onDoubleClick={this.handleDoubleClick.bind(this)}>
         <h4>{middleTitle}</h4>
 
         <div className="input-group search">
