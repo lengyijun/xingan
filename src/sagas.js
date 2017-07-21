@@ -1,4 +1,5 @@
 import { fork,call, put, takeEvery, takeLatest,all } from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 import fetch from 'isomorphic-fetch'
 import axios from 'axios'
 import aesjs from 'aes-js'
@@ -11,16 +12,9 @@ function getinitialdata(){
   return axios.get(baseurl+"ciphertext/?page=1"
   ).then(function (req) {
     return req.data.results.map(function (x){
-      console.log(x)
       var a=decrypt(x.content).split("{{{")
       var paragraph=a[1].split("\n")
       paragraph.splice(-1,1)  //删除最后的11010101串
-      console.log({
-        id: x.id,
-        title: a[0],
-        p:paragraph.join("\n"),
-        keys:x.keys
-      })
       return {
         id: x.id,
         title: a[0],
@@ -156,8 +150,10 @@ function querygraphjson(){
 
 function * getGraphJson(){
     console.log("query graph json")
+    yield delay(10000)
     const graphjson=yield call(querygraphjson);
     yield put({type:"GRAPH",edges:graphjson.edges,nodes:graphjson.nodes});
+    yield put({type:"SAGAGRAPH"}) 
 
 }
 
@@ -175,7 +171,7 @@ function* mySaga(){
     takeEvery("ADDREMOTE",addonenote), //添加
     takeEvery("APPEND_SAGA",appendNote), //添加
     takeLatest("SEARCH",finishsearch), //搜索
-    takeEvery("SAGAGRAPH",getGraphJson) //搜索
+    takeLatest("SAGAGRAPH",getGraphJson) 
   ]
 }
 
