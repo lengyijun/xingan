@@ -98,11 +98,13 @@ function* finishsearch(action){
      ).then(function (req) {
        return req.data.results.map(function (x) {
          var a = decrypt(x.content).split("{{{")
+        var paragraph=a[1].split("\n")
+        paragraph.splice(-1,1)  //删除最后的11010101串
          console.log(a)
          return {
            id: x.id,
            title: a[0],
-           p: a[1],
+           p: paragraph.join("\n"),
            keys:x.keys
          }
        })

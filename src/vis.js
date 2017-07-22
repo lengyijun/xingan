@@ -54,10 +54,14 @@ class Vis extends Component {
         })(this)
 
         var options = {
-            height:"600px",
+            height:"1000px",
             width:"2000px",
             interaction:{
-                hover:true
+                hover:true,
+                dragNodes :false
+            },
+            physics: {
+                enabled: false
             },
             layout: {
                 hierarchical:{
