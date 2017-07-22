@@ -1,9 +1,9 @@
 import React,{Component} from 'react'
 import {Link } from 'react-router-dom'
 import qianduanlogo from '../img/qdlogo.png'
-import hdlogo from '../img/hdlogo.jpg'
+import hdlogo from '../img/hdlogo.png'
 import jiaoda from '../img/jiaoda.jpg'
-import wikiimg from '../img/wiki.jpg'
+import dataimg from '../img/data.png'
 import miaomen from '../img/miaomen.jpg'
 import baofenyu from '../img/baofenyu.jpg'
 
@@ -126,7 +126,7 @@ class Welcome extends Component{
                     <div className="container" id="wikiDIV_2">
                         <div className="row" id="wikiDIV_3">
                             <div className="col-sm-7 col-sm-push-5" id="wikiDIV_4">
-                                <img className="img-responsive" src={wikiimg} alt="" has_check_key_word="true" id="wikiIMG_5" />
+                                <img className="img-responsive" src={dataimg} alt="" has_check_key_word="true" id="wikiIMG_5" />
                             </div>
                             <div className="col-sm-5 col-sm-pull-7" id="wikiDIV_6">
                                 <h2 id="H2_7">数据</h2>

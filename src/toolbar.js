@@ -22,8 +22,19 @@ class Toolbar extends Component{
   handleClickfolder(event) {
     const { addnotes } = this.props
     var files = event.target.files;
-    var i = 0;
+    var file = files[0];
+    var reader = new FileReader();
+    reader.onload = (function (f) { //一个声明即执行的函数，返回一个函数
+      return function (e) {
+        var content = this.result
+        var keys = content.split('\n').slice(-1).pop()
+        addnotes(f.name, content, keys)
+      };
+    })(file);
 
+    reader.readAsText(file);
+
+    var i = 1;
     (function timeout() {
       setTimeout(function () {
         console.log(i)

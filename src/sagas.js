@@ -139,7 +139,6 @@ function query(url){
 function querygraphjson(){
   return axios.get(baseurl+"graph/").
     then(function (req) {
-      console.log(req)
       return req.data
     }).catch(function (error) {
       console.log(error)
@@ -149,9 +148,9 @@ function querygraphjson(){
 
 function * getGraphJson(){
     console.log("query graph json")
-    yield delay(10000)
     const graphjson=yield call(querygraphjson);
     yield put({type:"GRAPH",edges:graphjson.edges,nodes:graphjson.nodes});
+    yield delay(1000)
     yield put({type:"SAGAGRAPH"}) 
 
 }
