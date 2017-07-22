@@ -6,7 +6,7 @@ import aesjs from 'aes-js'
 import dict1 from './b.js'
 
 var baseurl="http://115.159.88.104:2118/"
-var nexturl="https://www.wangjksjtu.com.cn:2118/ciphertext/?page=2"
+var nexturl="http://115.159.88.104:2118/ciphertext/?page=2"
 
 function getinitialdata(){
   return axios.get(baseurl+"ciphertext/?page=1"
