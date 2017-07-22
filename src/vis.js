@@ -55,7 +55,7 @@ class Vis extends Component {
 
         var options = {
             height:"600px",
-            width:"1000px",
+            width:"2000px",
             interaction:{
                 hover:true
             },
