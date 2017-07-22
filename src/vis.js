@@ -14,8 +14,8 @@ class Vis extends Component {
     } 
 
     componentWillReceiveProps(nextProps){
-        console.log("vis new data")
         if("graphjson" in nextProps){
+            console.log("new graphjson in vis")
             this.setState({
                 graphjson:nextProps.graphjson
             })
@@ -23,6 +23,11 @@ class Vis extends Component {
         if("id2handleid" in nextProps){
             this.setState({
                 id2handleid:nextProps.id2handleid
+            })
+        }
+        if("graphId" in nextProps){
+            this.setState({
+                graphid:nextProps.graphid
             })
         }
     }
@@ -33,9 +38,9 @@ class Vis extends Component {
 
     render() {
         var f1=(function(a){
-            return(function(handleid){
-                console.log(handleid)
-                return(a.state.id2handleid[handleid])
+            return(function(id){
+                console.log(id)
+                return(a.state.id2handleid[id])
 
             })
         })(this)
@@ -50,6 +55,7 @@ class Vis extends Component {
 
         var options = {
             height:"600px",
+            width:"1000px",
             interaction:{
                 hover:true
             },
@@ -75,14 +81,13 @@ class Vis extends Component {
                 console.log(event)
             },
             showPopup:function(event){
-                console.log("show popup "+event)
+                // console.log("show popup "+event)
             },
             selectNode:function(event){
-                var handleid=event.nodes[0]
-                var b=f1(handleid)
-                f2(b)
+                var id=event.nodes[0]
+                var handleid=f1(id)
+                f2(handleid)
             }
-
         }
 
         return (
@@ -96,7 +101,8 @@ class Vis extends Component {
 function mapPropToProps(state){
   return{
       graphjson:{nodes:state.nodes,edges:state.edges},
-      id2handleid:state.id2handleid
+      id2handleid:state.id2handleid,
+      graphId:state.graphId
   }
 }
 
