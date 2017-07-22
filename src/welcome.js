@@ -2,9 +2,7 @@ import React,{Component} from 'react'
 import {Link } from 'react-router-dom'
 import qianduanlogo from '../img/qdlogo.png'
 import hdlogo from '../img/hdlogo.png'
-import jiaoda from '../img/jiaoda.jpg'
 import dataimg from '../img/data.png'
-import miaomen from '../img/miaomen.jpg'
 import baofenyu from '../img/baofenyu.jpg'
 
 import chaozuo from '../img/icon/操作.png'
@@ -45,7 +43,7 @@ class Welcome extends Component{
                 <div class="data-manager" id="dmDIV_1">
                     <div class="container text-center" id="dmDIV_2">
                         <div class="row" id="dmDIV_3">
-                            <div class="col-xs-12 text-center" id="dmDIV_4"><h2 id="H2_5">我想这里介绍一下项目的特色，需要配图</h2></div>
+                            <div class="col-xs-12 text-center" id="dmDIV_4"><h2 id="H2_5">项目特色</h2></div>
                         </div>
                         <div class="row" id="dmDIV_6">
                             <div class="col-sm-4 col-xs-6" id="dmDIV_7">
@@ -88,7 +86,7 @@ class Welcome extends Component{
 
                                 <h3 id="H3_25">操作</h3>
 
-                                <p id="P_26">支持上传，新建，更新，删除笔记操作</p>
+                                <p id="P_26">支持上传，新建，更新，删除操作</p>
                             </div>
                         </div>
                     </div>
@@ -102,7 +100,7 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="DIV_6">
                                 <h2 id="H2_7">前端</h2>
 
-                                <p id="P_8">模块化设计，实时展现数据库状态</p>
+                                <p id="P_8">模块化设计，给用户呈现友好的交互界面。实时显示数据库状态，数据位置一目了然</p>
                             </div>
 
                         </div>
@@ -117,7 +115,7 @@ class Welcome extends Component{
                             <div className="col-sm-5" id="DIV_61">
                                 <h2 className="team-h2-first" id="H2_71">后端</h2>
 
-                                <p id="P_91">王靖康需要想一句话</p>
+                                <p id="P_91">高并发性，高可用性。数据的安全值得信赖</p>
                             </div>
                         </div>
                     </div>
@@ -131,7 +129,7 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="wikiDIV_6">
                                 <h2 id="H2_7">数据</h2>
 
-                                <p id="P_8">中英文论文、邮件、笔记全文搜索</p>
+                                <p id="P_8">中英文，论文、邮件、笔记全文搜索</p>
                             </div>
                         </div>
                     </div>
