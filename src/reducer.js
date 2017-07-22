@@ -5,7 +5,7 @@ var tasks_init=[
     id:0,
     title:"hello 鲜",
     keys:"10101010100111111111111111111111111111111111111111111111111111",
-    p:"这里写一句欢迎语，因为正好会打开这条笔记"
+    p:"欢迎使用SSE可搜索加密系统"
   }
 ]
 
@@ -24,28 +24,26 @@ var tasks_init=[
           { from: 2, to: 5 }
       ]
 
-function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,edges:edges,id2handleid:{}},action){
+function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",nodes:nodes,edges:edges,id2handleid:{}},action){
   switch(action.type){
     case GRAPH:
-    console.log(action.nodes.length===state.nodes.length)
-    console.log(action.nodes.every((v,i)=>JSON.stringify(v) ===JSON.stringify(state.nodes[i])) )
-    console.log(action.edges.length===state.edges.length )
+    // console.log(action.nodes.length===state.nodes.length)
+    // console.log(action.nodes.every((v,i)=>JSON.stringify(v) ===JSON.stringify(state.nodes[i])) )
+    // console.log(action.edges.length===state.edges.length )
     // console.log(action.edges.every((v,i)=> JSON.stringify(v) ===JSON.stringify(state.edges[i])))
-    console.log(action.edges)
-    console.log(state.edges)
 
-    if(
-    action.nodes.length==state.nodes.length 
-    && 
-    action.nodes.every((v,i)=>JSON.stringify(v) ===JSON.stringify(state.nodes[i])) 
-    &&
-    action.edges.length===state.edges.length 
-    // && action.edges.every((v,i)=> JSON.stringify(v) ===JSON.stringify(state.edges[i]))  //节点和边的数量都相同，树应该是一样的
-    ){
-      console.log("the same")
+    if (
+      action.nodes.length == state.nodes.length
+      &&
+      action.nodes.every((v, i) => JSON.stringify(v) === JSON.stringify(state.nodes[i]))
+      &&
+      action.edges.length === state.edges.length
+      // && action.edges.every((v,i)=> JSON.stringify(v) ===JSON.stringify(state.edges[i]))  //节点和边的数量都相同，树应该是一样的
+    ) {
+      // console.log("the same")
       return state
     }
-      console.log("reducer graph")
+      // console.log("reducer graph")
       var a=action.nodes.filter((x)=>x.handle_id)  //选择有handle_id的node
       var c={}
       a.map(function(x){
@@ -86,7 +84,13 @@ function todos(state={tasks: tasks_init, isnote:0,middleTitle:"SSE",nodes:nodes,
       }
     case ONID:   //点击某一条笔记之后更新id
       console.log("reducer onid: "+action.id)
-      return {...state,isnote:action.id}
+      var newGraphid=0;
+      for(var key in state.id2handleid){
+        if(state.id2handleid[key]===action.id){
+          newGraphid=key
+        }
+      }
+      return {...state,isnote:action.id,graphId:newGraphid}
     case DELETE:
       var t=state.tasks.filter(function(x){
         return(x.id !== state.isnote)
