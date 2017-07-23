@@ -64,7 +64,7 @@ class Toolbar extends Component{
     return(
       <section id="toolbar">
         <div id="firstgly">
-          <i className="glyphicon glyphicon-plus-sign" onClick={x=>this.props.addnotes("无标题","")}></i>
+          <i className="glyphicon glyphicon-plus-sign" onClick={x=>this.props.addnotes("Hello","Hello content","0100001000000001000000000000000001000100000100000001000010000000100000000000100000000000000010000000")}></i>
           <i className="glyphicon glyphicon-search" onClick={this.toggleSidebar.bind(this)}></i>
           <i className="glyphicon glyphicon-remove-circle" onClick={x=>this.props.remove()}></i>
           <i className="glyphicon glyphicon-refresh" onClick={x=>this.props.append()}></i>

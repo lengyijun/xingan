@@ -78,6 +78,7 @@ class App extends Component{
           yournote={t}
           isnote={this.props.isnote}
           updateById={(x,y) => dispatch(updateById(x,y))}
+          putRemote={(title,p,keys,id) =>dispatch({type:"PUTSINGLENOTE",payload:{title,p,keys,id}})}
         />
         </div>
         

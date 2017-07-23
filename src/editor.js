@@ -4,29 +4,33 @@ import TagCloud from './tagcloud'
 
 class Editor extends Component{
   componentWillMount(){
-    const {yournote,isnote} =this.props
+    const {yournote,isnote,dispatch} =this.props
       this.state={
         oldisnote:isnote,
         t:yournote,
         title:yournote.title,
         p:yournote.p,
-        keys:yournote.keys
+        keys:yournote.keys,
+        changed:false
       }
   }
 
 componentWillReceiveProps(nextProps){
-  const {updateById}=this.props
+  const {updateById,putRemote}=this.props
   if("yournote" in nextProps){
     console.log("in next prop ---------------------")
-    console.log(nextProps.yournote)
     var t={title:this.state.title,p:this.state.p}
     updateById(this.state.oldisnote,t)
+    if(this.state.changed){
+      putRemote(this.state.title,this.state.p,this.state.keys,this.state.oldisnote)
+    }
     this.setState({
       oldisnote:nextProps.isnote,
       t:nextProps.yournote,
       title:nextProps.yournote.title,
       p:nextProps.yournote.p,
-      keys:nextProps.yournote.keys
+      keys:nextProps.yournote.keys,
+      changed:false
     })
   }
 }
@@ -34,7 +38,6 @@ componentWillReceiveProps(nextProps){
     var title=this.state.title
     var p=this.state.p
     var keys=this.state.keys
-    console.log(keys)
     return(
     <div id="note-editor">
     <div className="form-group" id="form-group">
@@ -60,23 +63,25 @@ componentWillReceiveProps(nextProps){
   }
 
   _onChangeTitle(e){
-    this.setState(
-      {
-        title:e.target.value
-      }
-    )
+    this.setState({
+        title:e.target.value,
+        changed:true
+      })
   }
 
   _onChangeContent(e){
     this.setState({
-      p:e.target.value
+      p:e.target.value,
+      changed:true
     })
   }
 }
 
 Editor.PropTypes={
   yournote:PropTypes.object.isRequired,
-  isnote:PropTypes.number
+  isnote:PropTypes.number,
+  putRemote:PropTypes.func,
+  updateById:PropTypes.func
 }
 
 export default Editor

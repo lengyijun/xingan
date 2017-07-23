@@ -14,7 +14,10 @@ function getinitialdata(){
     return req.data.results.map(function (x){
       var a=decrypt(x.content).split("{{{")
       var paragraph=a[1].split("\n")
-      paragraph.splice(-1,1)  //删除最后的11010101串
+      var c=/[01]{100}/g.exec(paragraph[paragraph.length-1])
+      if(c !== null){
+        paragraph.splice(-1,1)  //删除最后的11010101串
+      }
       return {
         id: x.id,
         title: a[0],
@@ -96,7 +99,10 @@ function* finishsearch(action){
        return req.data.results.map(function (x) {
          var a = decrypt(x.content).split("{{{")
         var paragraph=a[1].split("\n")
+      var c=/[01]{100}/g.exec(paragraph[paragraph.length-1])
+      if(c !== null){
         paragraph.splice(-1,1)  //删除最后的11010101串
+      }
          console.log(a)
          return {
            id: x.id,
@@ -121,7 +127,10 @@ function query(url){
       return req.data.results.map(function (x) {
         var a = decrypt(x.content).split("{{{")
         var paragraph = a[1].split("\n")
-        paragraph.splice(-1, 1)  //删除最后的11010101串
+      var c=/[01]{100}/g.exec(paragraph[paragraph.length-1])
+      if(c !== null){
+        paragraph.splice(-1,1)  //删除最后的11010101串
+      }
         return {
           id: x.id,
           title: a[0],
@@ -149,7 +158,7 @@ function * getGraphJson(){
     console.log("query graph json")
     const graphjson=yield call(querygraphjson);
     yield put({type:"GRAPH",edges:graphjson.edges,nodes:graphjson.nodes});
-    yield delay(1000)
+    yield delay(500)
     yield put({type:"SAGAGRAPH"}) 
 
 }
@@ -161,6 +170,20 @@ function * appendNote(action){
     yield put({type:"APPEND",tasks:t});
 }
 
+function * putSingleNote(action){
+  console.log("put single note")
+    console.log(action.payload.title+"{{{"+action.payload.p)
+    var a=encrypt(action.payload.title+"{{{"+action.payload.p)
+    console.log(a)
+
+    return axios.put(baseurl+"ciphertext/"+action.payload.id+"/",{
+      content:a,
+      keys:action.payload.keys
+    }).then(res => console.log(res))
+
+}
+
+
 function* mySaga(){
   yield [
     takeEvery("INIT",initlocaldata), //初始化，获得所有数据
@@ -168,9 +191,9 @@ function* mySaga(){
     takeEvery("ADDREMOTE",addonenote), //添加
     takeEvery("APPEND_SAGA",appendNote), //添加
     takeLatest("SEARCH",finishsearch), //搜索
-    takeLatest("SAGAGRAPH",getGraphJson) 
+    takeLatest("SAGAGRAPH",getGraphJson) ,
+    takeEvery("PUTSINGLENOTE",putSingleNote)
   ]
 }
-
 
 export default mySaga;
