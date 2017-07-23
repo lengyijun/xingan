@@ -82,18 +82,15 @@ function* finishsearch(action){
  function search(keys) {
    console.log("searching " + keys)
    var keyarr=keys.split(" ")
-   var a=""
    for (var i = 0; i < keyarr.length; ++i) {
      var b=dict1[keyarr[i]]
      if(b !== undefined){
-      a += b
-      a += "|"
+       keyarr[i]=b
      }
    }
+    var a=keyarr.join("")
    console.log(a)
    if (a !== "") {
-     a=a.substring(0,a.length-1) //remove the last |
-     console.log(a)
      return axios.get(baseurl+"ciphertext/?key=" + a
      ).then(function (req) {
        return req.data.results.map(function (x) {
