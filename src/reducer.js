@@ -43,7 +43,7 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
       // console.log("the same")
       return state
     }
-      // console.log("reducer graph")
+      console.log("different")
       var a=action.nodes.filter((x)=>x.handle_id)  //选择有handle_id的node
       var c={}
       a.map(function(x){

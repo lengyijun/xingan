@@ -129,7 +129,7 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="wikiDIV_6">
                                 <h2 id="H2_7">数据</h2>
 
-                                <p id="P_8">中英文，论文、邮件、笔记全文搜索</p>
+                                <p id="P_8">中英文等多种语言，论文、邮件、笔记、隐私数据全文搜索</p>
                             </div>
                         </div>
                     </div>
