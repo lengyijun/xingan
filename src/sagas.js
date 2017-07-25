@@ -30,10 +30,10 @@ function getinitialdata(){
   })
 }
 
-function* deleteRemote(action){
-  console.log("delete "+action.payload.id)
+function* removeRemote(action){
+  console.log("remove "+action.payload.id)
   return fetch(baseurl+"ciphertext/"+action.payload.id+"/",{
-    method:"DELETE"
+    method:"delete"
   }).then(res=>console.log(res))
 }
 
@@ -155,7 +155,6 @@ function querygraphjson(){
 }
 
 function * getGraphJson(){
-    console.log("query graph json")
     const graphjson=yield call(querygraphjson);
     yield put({type:"GRAPH",edges:graphjson.edges,nodes:graphjson.nodes});
     yield delay(500)
@@ -187,7 +186,7 @@ function * putSingleNote(action){
 function* mySaga(){
   yield [
     takeEvery("INIT",initlocaldata), //初始化，获得所有数据
-    takeEvery("DELREMOTE",deleteRemote), //删除
+    takeEvery("DELREMOTE",removeRemote), //删除
     takeEvery("ADDREMOTE",addonenote), //添加
     takeEvery("APPEND_SAGA",appendNote), //添加
     takeLatest("SEARCH",finishsearch), //搜索

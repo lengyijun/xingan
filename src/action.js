@@ -2,7 +2,7 @@ export const UPDATE='UPDATE'
 export const ADD='ADD'
 export const UPDATEID="UPDATEID"
 export const ONID="ONID"
-export const DELETE="DELETE"
+export const REMOVE="remove"
 export const UPDATETITLE="UPDATETITLE"
 export const APPEND="APPEND"
 export const GRAPH="GRAPH"
@@ -57,7 +57,7 @@ export function onId(id){
 
 export function remove(){
   return {
-    type:DELETE
+    type:REMOVE
   }
 }
 

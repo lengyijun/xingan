@@ -29,7 +29,7 @@ ReactDOM.render(
         <Route exact path="/" component={Welcome}/>
         <Route exact path="/login" component={Login} />
         {/*<Route exact path="/tree" component={TreeDemo} />*/}
-        <Route exact path="/vis" component={Vis} />
+        {/* <Route exact path="/vis" component={Vis} /> */}
       </div>
     </Router>
   </Provider>,

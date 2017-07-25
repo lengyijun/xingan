@@ -14,8 +14,6 @@ class NoteList extends Component{
   }
   componentWillReceiveProps(nextProps){
     if('notes' in nextProps){
-      console.log("new note come to notelist")
-      console.log(nextProps.notes)
       this.setState({
         localnotes:nextProps.notes,
         inputvalue:""

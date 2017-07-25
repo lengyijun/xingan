@@ -1,4 +1,4 @@
-import {UPDATETITLE,UPDATE,GRAPH,ADD,UPDATEID,ONID,DELETE,APPEND} from './action';
+import {UPDATETITLE,UPDATE,GRAPH,ADD,UPDATEID,ONID,APPEND,REMOVE} from './action';
 
 var tasks_init=[
   {
@@ -70,7 +70,6 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
       return {...state,
         tasks:[...t,{id:newid,p:action.p,title:action.title}]}
     case UPDATEID:  //更新一条笔记
-      console.log("update id")
       var t=state.tasks
       var index=t.findIndex(function (x) {
         return(x.id===action.id)
@@ -83,20 +82,31 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
         return state
       }
     case ONID:   //点击某一条笔记之后更新id
-      console.log("reducer onid: "+action.id)
       var newGraphid=0;
       for(var key in state.id2handleid){
         if(state.id2handleid[key]===action.id){
           newGraphid=key
+          break
         }
       }
       return {...state,isnote:action.id,graphId:newGraphid}
-    case DELETE:
-      var t=state.tasks.filter(function(x){
-        return(x.id !== state.isnote)
-      })
-      console.log(t)
-      return {...state,tasks: t}
+    case REMOVE:
+      var index=0
+      console.log("isnote : "+state.isnote)
+      for(let i=0;i<state.tasks.length;++i){
+        if(state.tasks[i].id===state.isnote){
+          index=i
+          break
+        }
+      }
+      console.log(index)
+      var a=state.tasks.slice(0,index)
+      var b=state.tasks.slice(index+1)
+      console.log(a.length)
+      console.log(b.length)
+      // return {...state,tasks: state.tasks.slice(0,index).cancat(state.tasks.slice(index+1))}
+      return {...state,tasks: a.concat(b),isnote:state.isnote+1}
+      // return {...state,tasks: [...state.tasks.slice(0,index),...state.tasks.slice(index+1)]}
     case UPDATETITLE:
       return {...state,middleTitle:action.middleTitle}
     default:

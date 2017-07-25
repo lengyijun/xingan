@@ -21,7 +21,7 @@ class MyTagCloud extends Component {
             }
 
         }
-        console.log(data)
+        // console.log(data)
         /* CSS:
         @keyframes blinker {
           50% { opacity: 0.0; }

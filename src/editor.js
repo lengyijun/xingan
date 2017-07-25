@@ -18,7 +18,6 @@ class Editor extends Component{
 componentWillReceiveProps(nextProps){
   const {updateById,putRemote}=this.props
   if("yournote" in nextProps){
-    console.log("in next prop ---------------------")
     var t={title:this.state.title,p:this.state.p}
     updateById(this.state.oldisnote,t)
     if(this.state.changed){

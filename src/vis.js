@@ -37,6 +37,7 @@ class Vis extends Component {
     }
 
     render() {
+        console.log("vis render new data")
         var f1=(function(a){
             return(function(id){
                 console.log(id)
@@ -54,11 +55,13 @@ class Vis extends Component {
         })(this)
 
         var options = {
-            height:"1000px",
-            width:"2000px",
+            height:"100%",
+            width:"100%",
             interaction:{
                 hover:true,
-                dragNodes :false
+                dragNodes :false,
+                navigationButtons: true,
+                keyboard: true
             },
             physics: {
                 enabled: false
@@ -69,8 +72,18 @@ class Vis extends Component {
                 }
             },
             edges: {
-                color: "#000000"
+                // color: "#000000",
+                width:2
             },
+            nodes:{
+                size:30,
+                shape:'dot',
+                font:{
+                    size:18,
+                    color:'#FFFFF'
+                },
+                borderWidth:2
+            }
         };
 
         var events = {
@@ -85,7 +98,7 @@ class Vis extends Component {
                 console.log(event)
             },
             showPopup:function(event){
-                // console.log("show popup "+event)
+                console.log("show popup "+event)
             },
             selectNode:function(event){
                 var id=event.nodes[0]
@@ -96,7 +109,7 @@ class Vis extends Component {
 
         return (
             <div id="vis">
-                <Graph graph={this.state.graphjson} options={options} events={events} />
+                <Graph graph={this.state.graphjson} options={options} events={events} style={{ width: '100%', height: '100%' }}/>
             </div>
         )
     }
