@@ -21,13 +21,8 @@ class Welcome extends Component{
                         <ul className="navbar-nav navbar-right">
                             <li><a className="navbar-nav-link active" href="/">首页</a></li>
                             <li><a className="navbar-nav-link" href="https://github.com/lengyijun/xingan" target="_blank">前端</a></li>
-Z 
-
-
-
-
-
-                            <li><a className="navbar-nav-link" href="http://115.159.88.104:7474/browser/" target="_blank">数据库</a></li>
+                            <li><a className="navbar-nav-link" href="https://github.com/wangjksjtu/SJTU-SSE" target="_blank">后端</a></li>
+                            <li><a className="navbar-nav-link" href="http://115.159.88.104:7474/browser/" target="_blank">neo4j</a></li>
                             <li><a className="navbar-nav-link" href="http://115.159.88.104:2118/" target="_blank">管理</a></li>
                             <li><Link to="/login"><a className="navbar-nav-link" target="_blank">登录</a></Link></li>
                         </ul>
