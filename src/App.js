@@ -6,7 +6,7 @@ import NoteList from './notesList'
 import {add,remove,updateById} from './action'
 // import TreeDemo from './treedemo'
 import Vis from './vis'
-import hengda from '../img/hengda.png'
+import haiyan from '../img/haiyan.png'
 
 class App extends Component{
   componentWillMount(){
@@ -53,7 +53,7 @@ class App extends Component{
           </div>
           <div onClick={this.toggleSidebar.bind(this)}  style={{width:"200px",height:"40px",position:"absolute",right:"0px",top:0,padding:"0 23px",paddingRight:0}}>
             <i className="glyphicon glyphicon-circle-arrow-right" id="arrow" style={{position:"relative",float:"right",height:"40px",width:"40px",fontSize:"30px",marginTop:"3px"}} />
-              <img src={hengda} style={{width:"34px",height:"34px",marginTop:"3px",position:"relative",float:"right",marginRight:"15px"}}/>
+              <img src={haiyan} style={{width:"34px",height:"34px",marginTop:"3px",position:"relative",float:"right",marginRight:"15px"}}/>
           </div>
         </header>
         <div id="left">
@@ -75,8 +75,6 @@ class App extends Component{
         />
         <NoteList />
         <Editor
-          yournote={t}
-          isnote={this.props.isnote}
           updateById={(x,y) => dispatch(updateById(x,y))}
           putRemote={(title,p,keys,id) =>dispatch({type:"PUTSINGLENOTE",payload:{title,p,keys,id}})}
         />

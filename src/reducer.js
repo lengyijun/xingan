@@ -1,4 +1,4 @@
-import {UPDATETITLE,UPDATE,GRAPH,ADD,UPDATEID,ONID,APPEND,REMOVE} from './action';
+import {CLICKBRANCH,UPDATETITLE,UPDATE,GRAPH,ADD,UPDATEID,ONID,APPEND,REMOVE} from './action';
 
 var tasks_init=[
   {
@@ -24,7 +24,20 @@ var tasks_init=[
           { from: 2, to: 5 }
       ]
 
-function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",nodes:nodes,edges:edges,id2handleid:{}},action){
+function todos(state={nowNote:{
+    id:0,
+    title:"hello 鲜",
+    keys:"10101010100111111111111111111111111111111111111111111111111111",
+    p:"欢迎使用SSE可搜索加密系统"
+  },
+  tasks: tasks_init, 
+  isnote:0,
+  graphId:0,
+  middleTitle:"SSE",
+  nodes:nodes,
+  edges:edges,
+  id2handleid:{},
+  branch:true},action){
   switch(action.type){
     case GRAPH:
     // console.log(action.nodes.length===state.nodes.length)
@@ -68,7 +81,7 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
       var newid=1+Math.max(...t.map(x=>x.id))
       console.log("newid: "+newid) 
       return {...state,
-        tasks:[...t,{id:newid,p:action.p,title:action.title}]}
+        tasks:[...t,{id:newid,p:action.p,title:action.title,keys:"10101010100111111111111111111111111111111111111111111111111111"}]}
     case UPDATEID:  //更新一条笔记
       var t=state.tasks
       var index=t.findIndex(function (x) {
@@ -82,6 +95,7 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
         return state
       }
     case ONID:   //点击某一条笔记之后更新id
+    console.log("onid")
       var newGraphid=0;
       for(var key in state.id2handleid){
         if(state.id2handleid[key]===action.id){
@@ -89,7 +103,11 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
           break
         }
       }
-      return {...state,isnote:action.id,graphId:newGraphid}
+    var t=state.tasks.find(function (x) {
+      return(x.id ===action.id)
+    })
+    console.log(t)
+      return {...state,isnote:action.id,graphId:newGraphid,nowNote:t}
     case REMOVE:
       var index=0
       console.log("isnote : "+state.isnote)
@@ -109,6 +127,10 @@ function todos(state={tasks: tasks_init, isnote:0,graphId:0,middleTitle:"SSE",no
       // return {...state,tasks: [...state.tasks.slice(0,index),...state.tasks.slice(index+1)]}
     case UPDATETITLE:
       return {...state,middleTitle:action.middleTitle}
+    case CLICKBRANCH:
+    //这里需要找一下keys
+    //只有id
+      return {...state,nowNote:{keys:action.key,title:action.branchId}}
     default:
       return state
   }

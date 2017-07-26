@@ -6,6 +6,7 @@ export const REMOVE="remove"
 export const UPDATETITLE="UPDATETITLE"
 export const APPEND="APPEND"
 export const GRAPH="GRAPH"
+export const CLICKBRANCH="CLICKBRANCH"
 
 export function graphaction(edges,nodes){
   return{
@@ -65,5 +66,12 @@ export function updatetitle(middleTitle){
   return{
     type:UPDATETITLE,
     middleTitle
+  }
+}
+
+export function clickBranch(branchId,keys){
+  return{
+    type:CLICKBRANCH,
+    branchId,
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Graph from 'react-graph-vis'
 import {connect} from 'react-redux'
-import {onId} from './action'
+import {onId,clickBranch} from './action'
 
 class Vis extends Component {
      componentWillMount(){ 
@@ -48,9 +48,15 @@ class Vis extends Component {
 
         var f2=(function(context){
             return(function(id){
-                console.log("on id "+id)
                 const {dispatch}=context.props
                 dispatch(onId(id))
+            })
+        })(this)
+
+        var f3=(function(context){
+            return(function(id){
+                const {dispatch}=context.props
+                dispatch(clickBranch(id))
             })
         })(this)
 
@@ -103,7 +109,11 @@ class Vis extends Component {
             selectNode:function(event){
                 var id=event.nodes[0]
                 var handleid=f1(id)
-                f2(handleid)
+                if(handleid !== undefined){
+                    f2(handleid)
+                }else{
+                    f3(id)
+                }
             }
         }
 
