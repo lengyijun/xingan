@@ -10,6 +10,7 @@ class Editor extends Component{
         title:nowNote.title,
         p:nowNote.p,
         keys:nowNote.keys,
+        branch:true,
         changed:false
       }
   }
@@ -30,15 +31,18 @@ componentWillReceiveProps(nextProps){
       changed:false
     })
   }
-  if("nowNote" in nextProps){
+  if("branch" in nextProps){
+    console.log("in editorjs branch "+nextProps.branch)
     this.setState({
-      title:nextProps.nowNote.title,
-      keys:nextProps.nowNote.keys,
-      changed:false
+      branch:nextProps.branch
     })
   }
 }
   render(){
+    var a="block"
+    if(! this.state.branch){
+      a="none"
+    }
     var title=this.state.title
     var p=this.state.p
     var keys=this.state.keys
@@ -57,8 +61,8 @@ componentWillReceiveProps(nextProps){
       <textarea
         spellCheck="false" autoCapitalize="off" autoComplete="off" autoCorrect="off"
         value={p}
+        style={{display:a}}
         onChange={this._onChangeContent.bind(this)}
-        display={this.props.branch}
         placeholder="请输入正文" >
       </textarea>
     </div>

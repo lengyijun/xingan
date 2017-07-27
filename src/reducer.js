@@ -24,12 +24,14 @@ var tasks_init=[
           { from: 2, to: 5 }
       ]
 
-function todos(state={nowNote:{
+function todos(state={
+  nowNote:{
     id:0,
     title:"hello 鲜",
     keys:"10101010100111111111111111111111111111111111111111111111111111",
     p:"欢迎使用SSE可搜索加密系统"
   },
+  branch:true,
   tasks: tasks_init, 
   isnote:0,
   graphId:0,
@@ -37,7 +39,7 @@ function todos(state={nowNote:{
   nodes:nodes,
   edges:edges,
   id2handleid:{},
-  branch:true},action){
+  },action){
   switch(action.type){
     case GRAPH:
     // console.log(action.nodes.length===state.nodes.length)
@@ -107,7 +109,7 @@ function todos(state={nowNote:{
       return(x.id ===action.id)
     })
     console.log(t)
-      return {...state,isnote:action.id,graphId:newGraphid,nowNote:t}
+      return {...state,isnote:action.id,graphId:newGraphid,nowNote:t,branch:true}
     case REMOVE:
       var index=0
       console.log("isnote : "+state.isnote)
@@ -130,7 +132,8 @@ function todos(state={nowNote:{
     case CLICKBRANCH:
     //这里需要找一下keys
     //只有id
-      return {...state,nowNote:{keys:action.key,title:action.branchId}}
+      console.log(state.branch)
+      return {...state,branch:false,nowNote:{p:"",keys:"10101010",title:action.branchId}}
     default:
       return state
   }
