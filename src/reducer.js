@@ -132,8 +132,13 @@ function todos(state={
     case CLICKBRANCH:
     //这里需要找一下keys
     //只有id
-      console.log(state.branch)
-      return {...state,branch:false,nowNote:{p:"",keys:"10101010",title:action.branchId}}
+      console.log(action.branchId)
+      var a=action.branchId
+      var b=state.nodes.filter(function(x){
+        return(x.id===a)
+      })[0]
+      console.log(b)
+      return {...state,branch:false,nowNote:{p:"",keys:b.keys,title:action.branchId}}
     default:
       return state
   }
