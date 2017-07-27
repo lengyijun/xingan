@@ -1,10 +1,10 @@
 #wikiDIV_1 {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     height: 572px;
     text-decoration: none solid rgb(102, 102, 102);
-    width: 758px;
+    /* width: 758px; */
     column-rule-color: rgb(102, 102, 102);
     perspective-origin: 379px 286px;
     transform-origin: 379px 286px;

@@ -12,6 +12,10 @@ import liantong from '../img/icon/连通.png'
 import sousuo from '../img/icon/搜索.png'
 import xiaolv from '../img/icon/效率.png'
 
+import neo4j from '../img/neo4j.png'
+import yunjisuan from '../img/yunjisuan.jpg'
+import yun from '../img/yun.jpg'
+
 class Welcome extends Component{
     render(){
         return (
@@ -91,7 +95,7 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="forge" id="DIV_1">
+                <div className="forge" id="DIV_1" style={{"background-image":"url("+ neo4j + ")","background-repeat":"no-repeat","background-size":"100%" }}>
                     <div className="container" id="DIV_2">
                         <div className="row" id="DIV_3">
                             <div className="col-sm-7 col-sm-push-5" id="DIV_4">
@@ -106,7 +110,7 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="team" id="DIV_11">
+                <div className="team" id="DIV_11" style={{ background: `url(${yun}) no-repeat center center`,"background-size":"100% 100%" }}>
                     <div className="container" id="DIV_21">
                         <div classNaem="row" id="DIV_31">
                             <div className="col-sm-7" id="DIV_41">
@@ -120,7 +124,7 @@ class Welcome extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="wikicolumn" id="wikiDIV_1">
+                <div className="wikicolumn" id="wikiDIV_1" style={{ background: `url(${yunjisuan}) no-repeat center center`,"background-size":"100% 100%" }}>
                     <div className="container" id="wikiDIV_2">
                         <div className="row" id="wikiDIV_3">
                             <div className="col-sm-7 col-sm-push-5" id="wikiDIV_4">

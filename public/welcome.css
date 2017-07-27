@@ -106,7 +106,7 @@
     color: rgb(102, 102, 102);
     height: 572px;
     text-decoration: none solid rgb(102, 102, 102);
-    width: 758px;
+    /* width: 758px; */
     column-rule-color: rgb(102, 102, 102);
     perspective-origin: 379px 286px;
     transform-origin: 379px 286px;
@@ -249,7 +249,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 462px;
+    height: 572px;
     text-decoration: none solid rgb(102, 102, 102);
     /*width: 853px;*/
     column-rule-color: rgb(102, 102, 102);
@@ -267,7 +267,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 279px;
+    height:394;
     max-width: 1024px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 853px;
@@ -283,7 +283,7 @@
 #DIV_31 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 279px;
+    height: 394px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 853px;
     column-rule-color: rgb(102, 102, 102);
@@ -340,7 +340,7 @@
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     float: left;
-    height: 279px;
+    height:394px;
     left: 0px;
     min-height: 1px;
     position: relative;
