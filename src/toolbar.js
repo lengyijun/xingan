@@ -55,7 +55,7 @@ class Toolbar extends Component{
         reader.readAsText(file);
         i += 1;
         timeout();
-      }, 10000);
+      }, 500);
     })()
 
   }
