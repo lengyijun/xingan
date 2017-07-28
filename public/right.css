@@ -30,12 +30,13 @@
 }
 
 #vis{
+  /* width: calc( 100% - 300px ); */
   background: white;
   position: fixed;
   top:0;
   bottom: 0;
-  max-width: 50%;
-  width: 100%;
+   max-width: 50%; 
+   width: 100%; 
   right: -50%;
   z-index: 1000;
   border: 1px solid #BBBCC4;
