@@ -137,8 +137,8 @@ function todos(state={
       var b=state.nodes.filter(function(x){
         return(x.id===a)
       })[0]
-      console.log(b)
-      return {...state,branch:false,nowNote:{p:"",keys:b.label,title:action.branchId}}
+      console.log(b.label)
+      return {...state,branch:false,nowNote:{p:"",keys:b.keys,title:b.label}}
     default:
       return state
   }
