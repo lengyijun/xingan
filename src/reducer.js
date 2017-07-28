@@ -138,7 +138,7 @@ function todos(state={
         return(x.id===a)
       })[0]
       console.log(b)
-      return {...state,branch:false,nowNote:{p:"",keys:b.keys,title:action.branchId}}
+      return {...state,branch:false,nowNote:{p:"",keys:b.label,title:action.branchId}}
     default:
       return state
   }
