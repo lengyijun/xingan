@@ -51,7 +51,7 @@
 
 .banner{
     height:670px;
-    /*background:url("http://img.hb.aicdn.com/ad4c7729e2cbc7059ab1a39413191eb1a86a4d593dc6c-gXx5J2_fw658") no-repeat center center;*/
+    /*background:url("http://img.hb.aicdn.com/ad4c7729e2cbc7059ab1a70013191eb1a86a4d593dc6c-gXx5J2_fw658") no-repeat center center;*/
     background-size: 100% 100%;
     padding: 80px;
     padding-left: 20px;
@@ -104,7 +104,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 572px;
+    height: 700px;
     text-decoration: none solid rgb(102, 102, 102);
     /* width: 758px; */
     column-rule-color: rgb(102, 102, 102);
@@ -120,7 +120,7 @@
 #DIV_2 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 394px;
+    height: 700px;
     max-width: 1024px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 758px;
@@ -136,7 +136,7 @@
 #DIV_3 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 394px;
+    height: 700px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 758px;
     column-rule-color: rgb(102, 102, 102);
@@ -194,7 +194,7 @@
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     float: left;
-    height: 394px;
+    height: 700px;
     left: -442.167px;
     min-height: 1px;
     position: relative;
@@ -249,7 +249,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 572px;
+    height: 700px;
     text-decoration: none solid rgb(102, 102, 102);
     /*width: 853px;*/
     column-rule-color: rgb(102, 102, 102);
@@ -267,7 +267,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height:394;
+    height:700;
     max-width: 1024px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 853px;
@@ -283,7 +283,7 @@
 #DIV_31 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 394px;
+    height: 700px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 853px;
     column-rule-color: rgb(102, 102, 102);
@@ -340,7 +340,7 @@
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     float: left;
-    height:394px;
+    height:700px;
     left: 0px;
     min-height: 1px;
     position: relative;

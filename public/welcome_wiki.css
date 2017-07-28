@@ -2,7 +2,7 @@
     /* margin: 0 auto; */
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 572px;
+    height: 700px;
     text-decoration: none solid rgb(102, 102, 102);
     /* width: 758px; */
     column-rule-color: rgb(102, 102, 102);
@@ -18,7 +18,7 @@
 #wikiDIV_2 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 394px;
+    height: 700px;
     max-width: 1024px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 758px;
@@ -34,7 +34,7 @@
 #wikiDIV_3 {
     box-sizing: border-box;
     color: rgb(102, 102, 102);
-    height: 394px;
+    height: 700px;
     text-decoration: none solid rgb(102, 102, 102);
     width: 758px;
     column-rule-color: rgb(102, 102, 102);
@@ -92,7 +92,7 @@
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     float: left;
-    height: 394px;
+    height: 700px;
     left: -442.167px;
     min-height: 1px;
     position: relative;
