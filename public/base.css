@@ -139,7 +139,7 @@ header #kbname{
 #container{
   position:relative;
    top: 5px; 
-   height: calc(100% - 110px);
+   height: calc(100% - 90px);
   width:200px;
   border: 1px solid #BBBCC4;
   overflow-x: auto;
