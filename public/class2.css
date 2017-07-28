@@ -1,0 +1,37 @@
+/*todo  */
+/*树的点击  */
+/*显示34  */
+.class2 #left{
+    right: 50%;
+    position: fixed;
+    left: 0;
+
+}
+
+.class2 #toolbar{
+    display: none
+}
+
+.class2 #notes-list{
+    display: none;
+    float: left;
+    margin-left: 13px;
+    position: relative;
+}
+
+.class2 #note-editor{
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.class2 #vis{
+     position:fixed; 
+     left: 50%;
+    max-width: 50%;
+     width: 100%; 
+    top:60px;
+    bottom: 6px;
+    right: 0;
+    border:1px solid #BBBCC4;
+}

@@ -145,6 +145,7 @@ header #kbname{
 }
 
 #note-editor{
+  display: none;
   float: left;
   width: calc( 100% - 300px );
   margin-left: 13px;

@@ -18,20 +18,22 @@ class App extends Component{
   }
 
   toggleSidebar() {
-    document.body.classList.toggle("menu-active", this.state.sidebar)
+    // document.body.classList.toggle("menu-active", this.state.sidebar)
+    document.body.classList.toggle("class2", this.state.sidebar)
+    document.body.classList.toggle("class3", ! this.state.sidebar)
     var arrow=document.getElementById("arrow")
     arrow.classList.toggle("glyphicon-circle-arrow-right",this.state.sidebar)
     arrow.classList.toggle("glyphicon-circle-arrow-left",!this.state.sidebar)
-    if(this.state.sidebar){ 
-      document.getElementById("toolbar").style.display="none"
-      document.getElementById("notes-list").style.display="none"
-      document.getElementById("note-editor").style.width="100%" //我在左边的时候
+    // if(this.state.sidebar){ 
+    //   document.getElementById("toolbar").style.display="none"
+    //   document.getElementById("notes-list").style.display="none"
+    //   document.getElementById("note-editor").style.width="100%" //我在左边的时候
 
-    }else{
-      document.getElementById("toolbar").style.display="block"
-      document.getElementById("notes-list").style.display="block"
-      document.getElementById("note-editor").style.width="calc(100% - 500px)"  //我在右边的时候
-    }
+    // }else{
+    //   document.getElementById("toolbar").style.display="block"
+    //   document.getElementById("notes-list").style.display="block"
+    //   document.getElementById("note-editor").style.width="calc(100% - 500px)"  //我在右边的时候
+    // }
     this.setState({
       sidebar: !this.state.sidebar
     })

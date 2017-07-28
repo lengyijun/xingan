@@ -3,7 +3,7 @@ import React,{Component,PropTypes} from 'react'
 class Toolbar extends Component{
 
   componentWillMount(){
-    document.body.classList.add("menu-active")
+    // document.body.classList.add("menu-active")
     this.setState({
       sidebar:true
     })

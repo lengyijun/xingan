@@ -31,16 +31,15 @@
 
 #vis{
   background: white;
-  position: fixed;
-  top:0;
-  bottom: 0;
-  max-width: 50%;
-  width: 100%;
-  right: -50%;
+  position:fixed;
+  width: calc( 100% - 300px );
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom:6px;
   z-index: 1000;
   border: 1px solid #BBBCC4;
-  top:60px;
-  bottom:6px;
+  height: 100%;
 }
 
 .vis-tooltip{
