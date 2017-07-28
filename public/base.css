@@ -119,6 +119,7 @@ header #kbname{
 
 #list-header{
   position: absolute;
+  height: 100%;
   top:7px;
 }
 #notes-list .input-group{
@@ -136,9 +137,9 @@ header #kbname{
 
 /*notelist 里面的*/
 #container{
-  position: absolute;
-  top: 85px;
-  bottom: 6px;
+  position:relative;
+   top: 5px; 
+   height: calc(100% - 110px);
   width:200px;
   border: 1px solid #BBBCC4;
   overflow-x: auto;

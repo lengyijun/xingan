@@ -76,20 +76,20 @@ class NoteList extends Component{
       <div id="list-header" onDoubleClick={this.handleDoubleClick.bind(this)}>
         <h4>{middleTitle}</h4>
 
-        <div className="input-group search">
+         <div className="input-group search"> 
           <input type="text" className="form-control" placeholder="Search for..." value={this.state.inputvalue} onChange={this.updateInputValue.bind(this)} />
           <span className="input-group-addon">
             <i className="glyphicon glyphicon-search" onClick={x => {this.search(this.state.inputvalue);this.setState({title:"search "+this.state.inputvalue})}}></i>
           </span>
         </div>
-
-      </div>
-
-      <div id="container">
+          <div id="container">
       <ul className="list-group">
         {t}
       </ul>
       </div>
+
+      </div>
+
       </div>
       </div>
     )
