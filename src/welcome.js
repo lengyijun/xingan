@@ -104,7 +104,12 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="DIV_6">
                                 <h2 id="H2_7">前端</h2>
 
-                                <p id="P_8">模块化设计，给用户呈现友好的交互界面。实时显示数据库状态，数据位置一目了然</p>
+                                <p id="P_8">
+                                    模块化设计，组件高复用性
+                                    <br/> 用户界面友好，实用功能丰富
+                                    <br/>动态实时显示数据库状态，数据所处位置一目了然
+                                    <br/>多种界面模式切换，用户使用灵活
+                                </p>
                             </div>
 
                         </div>
@@ -119,7 +124,13 @@ class Welcome extends Component{
                             <div className="col-sm-5" id="DIV_61">
                                 <h2 className="team-h2-first" id="H2_71">后端</h2>
 
-                                <p id="P_91">高并发性，高可用性。数据的安全值得信赖</p>
+                                <p id="P_91">
+                                    真实云端系统，安全通信认证<br/>
+                                    全加密数据，安全值得信赖<br/>
+                                    图数据库支持，海量数据高效搜索<br/>
+                                    压力测试检验，高度可用性，可拓展性
+                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -133,7 +144,12 @@ class Welcome extends Component{
                             <div className="col-sm-5 col-sm-pull-7" id="wikiDIV_6">
                                 <h2 id="H2_7">数据</h2>
 
-                                <p id="P_8">中英文等多种语言，论文、邮件、笔记、隐私数据全文搜索</p>
+                                <p id="P_8">
+                                    适用场景广泛，支持多种语言<br/>
+                                    个人、企业隐私数据全文搜索<br/>
+                                    个人邮件、笔记；医疗数据、企业共享文件
+                                    </p>
+                                {/* <p id="P_8">中英文等多种语言，论文、邮件、笔记、隐私数据全文搜索</p> */}
                             </div>
                         </div>
                     </div>

@@ -127,6 +127,7 @@
 }/*#H2_7*/
 
 #P_8 {
+    white-space: nowrap;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     height: 180px;
