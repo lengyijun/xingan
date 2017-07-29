@@ -76,7 +76,7 @@ class Welcome extends Component{
 
                                 <h3 id="H3_17">效率</h3>
 
-                                <p id="P_18">平衡树保证了O(n)的搜索复杂度</p>
+                                <p id="P_18">平衡树保证了O(r)的搜索复杂度</p>
                             </div>
                             <div class="col-sm-4 col-xs-6" id="dmDIV_19">
                                 <img class="img-responsive center-block" src={liantong} alt="" id="IMG_20" />
