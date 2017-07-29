@@ -122,10 +122,10 @@ function todos(state={
       console.log(index)
       var a=state.tasks.slice(0,index)
       var b=state.tasks.slice(index+1)
-      console.log(a.length)
-      console.log(b.length)
+      console.log(a)
+      console.log(b)
       // return {...state,tasks: state.tasks.slice(0,index).cancat(state.tasks.slice(index+1))}
-      return {...state,tasks: a.concat(b),isnote:state.isnote+1}
+      return {...state,tasks: a.concat(b)}
       // return {...state,tasks: [...state.tasks.slice(0,index),...state.tasks.slice(index+1)]}
     case UPDATETITLE:
       return {...state,middleTitle:action.middleTitle}
