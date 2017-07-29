@@ -97,7 +97,7 @@ function todos(state={
         return state
       }
     case ONID:   //点击某一条笔记之后更新id
-    console.log("onid")
+      console.log("onid")
       var newGraphid=0;
       for(var key in state.id2handleid){
         if(state.id2handleid[key]===action.id){
@@ -105,10 +105,10 @@ function todos(state={
           break
         }
       }
-    var t=state.tasks.find(function (x) {
-      return(x.id ===action.id)
-    })
-    console.log(t)
+      var t=state.tasks.find(function (x) {
+        return(x.id ===action.id)
+      })
+      console.log(t)
       return {...state,isnote:action.id,graphId:newGraphid,nowNote:t,branch:true}
     case REMOVE:
       var index=0
@@ -122,11 +122,7 @@ function todos(state={
       console.log(index)
       var a=state.tasks.slice(0,index)
       var b=state.tasks.slice(index+1)
-      console.log(a)
-      console.log(b)
-      // return {...state,tasks: state.tasks.slice(0,index).cancat(state.tasks.slice(index+1))}
       return {...state,tasks: a.concat(b)}
-      // return {...state,tasks: [...state.tasks.slice(0,index),...state.tasks.slice(index+1)]}
     case UPDATETITLE:
       return {...state,middleTitle:action.middleTitle}
     case CLICKBRANCH:
@@ -138,7 +134,7 @@ function todos(state={
         return(x.id===a)
       })[0]
       console.log(b.label)
-      return {...state,branch:false,nowNote:{p:"",keys:b.keys,title:b.label}}
+      return {...state,branch:false,nowNote:{p:"",keys:b.keys,title:b.label},isnote:10000}
     default:
       return state
   }

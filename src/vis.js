@@ -66,6 +66,7 @@ class Vis extends Component {
             interaction:{
                 hover:true,
                 dragNodes :false,
+                dragView:false,
                 navigationButtons: true,
                 keyboard: true
             },
